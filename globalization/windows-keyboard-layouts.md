@@ -1,63 +1,229 @@
+﻿---
+title: Windows keyboard layouts
+description: Choose a keyboard below to view its layouts.
+ms.date: 06/22/2023
+ms.topic: navigation
+author: jowilco
 ---
-title: Windows Keyboard Layouts
-description: 
-ms.assetid: 24ef3b64-cbb6-4e69-aa01-ed800bff4e47
-ms.date: 01/05/2017
----
 
-# Windows Keyboard Layouts
+# Windows keyboard layouts
 
-![Windows keyboard](/media/hubs/globalization/IC381691.jpg "Windows keyboard")
+Layouts generated using: Microsoft Windows 11 Enterprise 22H2 (22621.1848)
 
-Choose a keyboard below to view its layouts.
+Choose a keyboard below to view its layout.
 
-|         |         |         |         |         |
-|---------|---------|---------|---------|---------|
-| [Albanian](javascript:window.open("/globalization/keyboards/kbdal.html", "_blank", "height=130, width=347, scroll=no");) | [Arabic (101)](javascript:window.open("/globalization/keyboards/kbda1.html", "_blank", "height=130, width=347, scroll=no");) | [Arabic (102)](javascript:window.open("/globalization/keyboards/kbda2.html", "_blank", "height=130, width=347, scroll=no");) | [Arabic (102) AZERTY](javascript:window.open("/globalization/keyboards/kbda3.html", "_blank", "height=130, width=347, scroll=no");) | [Armenian Eastern](javascript:window.open("/globalization/keyboards/kbdarme.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Armenian Western](javascript:window.open("/globalization/keyboards/kbdarmw.html", "_blank", "height=130, width=347, scroll=no");) | [Assamese - INSCRIPT†](javascript:window.open("/globalization/keyboards/kbdinasa.html", "_blank", "height=130, width=347, scroll=no");) | [Azeri Cyrillic](javascript:window.open("/globalization/keyboards/kbdaze.html", "_blank", "height=130, width=347, scroll=no");) | [Azeri Latin](javascript:window.open("/globalization/keyboards/kbdazel.html", "_blank", "height=130, width=347, scroll=no");) | [Bashkir†](javascript:window.open("/globalization/keyboards/kbdbash.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Bashkir](javascript:window.open("/globalization/keyboards/kbdbhc.html", "_blank", "height=130, width=347, scroll=no");) | [Belarusian](javascript:window.open("/globalization/keyboards/kbdblr.html", "_blank", "height=130, width=347, scroll=no");) | [Belgian (Comma)](javascript:window.open("/globalization/keyboards/kbdbene.html", "_blank", "height=130, width=347, scroll=no");) | [Belgian French](javascript:window.open("/globalization/keyboards/kbdbe.html", "_blank", "height=130, width=347, scroll=no");) | [Bengali](javascript:window.open("/globalization/keyboards/kbdinben.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Bengali - INSCRIPT†](javascript:window.open("/globalization/keyboards/kbdinbe1.html", "_blank", "height=130, width=347, scroll=no");) | [Bengali - INSCRIPT (Legacy)**](javascript:window.open("/globalization/keyboards/kbdinbe1.html", "_blank", "height=130, width=347, scroll=no");) | [Bulgarian (Phonetic Traditional)‡](javascript:window.open("/globalization/keyboards/kbdbgph1.html", "_blank", "height=130, width=347, scroll=no");) | [Bulgarian (Phonetic)†](javascript:window.open("/globalization/keyboards/kbdbgph.html", "_blank", "height=130, width=347, scroll=no");) | [Bulgarian (Typewriter)†](javascript:window.open("/globalization/keyboards/kbdbu.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Canadian French](javascript:window.open("/globalization/keyboards/kbdca.html", "_blank", "height=130, width=347, scroll=no");) | [Canadian French (Legacy)](javascript:window.open("/globalization/keyboards/kbdfc.html", "_blank", "height=130, width=347, scroll=no");) | [Canadian Multilingual Standard](javascript:window.open("/globalization/keyboards/kbdcan.html", "_blank", "height=130, width=347, scroll=no");) | [Chinese Bopomofo IME](javascript:window.open("/globalization/keyboards/kbdTCBO.html", "_blank", "height=130, width=347, scroll=no");) | [Chinese ChaJei IME](javascript:window.open("/globalization/keyboards/kbdTCCJ.html", "_blank", "height=130, width=347, scroll=no");) | 
-| [Czech](javascript:window.open("/globalization/keyboards/kbdcz.html", "_blank", "height=130, width=347, scroll=no");) | [Czech (QWERTY)](javascript:window.open("/globalization/keyboards/kbdcz1.html", "_blank", "height=130, width=347, scroll=no");) | [Czech Programmers](javascript:window.open("/globalization/keyboards/kbdcz2.html", "_blank", "height=130, width=347, scroll=no");) | [Danish](javascript:window.open("/globalization/keyboards/kbdda.html", "_blank", "height=130, width=347, scroll=no");) | [Devanagari - INSCRIPT](javascript:window.open("/globalization/keyboards/kbdindev.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Divehi Phonetic*](javascript:window.open("/globalization/keyboards/kbddiv1.html", "_blank", "height=130, width=347, scroll=no");) | [Divehi Typewriter*](javascript:window.open("/globalization/keyboards/kbddiv2.html", "_blank", "height=130, width=347, scroll=no");) | [Dutch](javascript:window.open("/globalization/keyboards/kbdne.html", "_blank", "height=130, width=347, scroll=no");) | [Estonian](javascript:window.open("/globalization/keyboards/kbdest.html", "_blank", "height=130, width=347, scroll=no");) | [Faeroese](javascript:window.open("/globalization/keyboards/kbdfo.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Finnish](javascript:window.open("/globalization/keyboards/kbdfi.html", "_blank", "height=130, width=347, scroll=no");) | [Finnish with Sami**](javascript:window.open("/globalization/keyboards/kbdfi1.html", "_blank", "height=130, width=347, scroll=no");) | [French](javascript:window.open("/globalization/keyboards/kbdfr.html", "_blank", "height=130, width=347, scroll=no");) | [Gaelic](javascript:window.open("/globalization/keyboards/kbdgae.html", "_blank", "height=130, width=347, scroll=no");) | [Georgian](javascript:window.open("/globalization/keyboards/kbdgeo.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Georgian (Ergonomic)†](javascript:window.open("/globalization/keyboards/kbdgeoer.html", "_blank", "height=130, width=347, scroll=no");) | [Georgian (QWERTY)†](javascript:window.open("/globalization/keyboards/kbdgeoqw.html", "_blank", "height=130, width=347, scroll=no");) | [German](javascript:window.open("/globalization/keyboards/kbdgr.html", "_blank", "height=130, width=347, scroll=no");) | [German (IBM)](javascript:window.open("/globalization/keyboards/kbdgr1.html", "_blank", "height=130, width=347, scroll=no");) | [Greek](javascript:window.open("/globalization/keyboards/kbdhe.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Greek (220)](javascript:window.open("/globalization/keyboards/kbdhe220.html", "_blank", "height=130, width=347, scroll=no");) | [Greek (220) Latin](javascript:window.open("/globalization/keyboards/kbdhela2.html", "_blank", "height=130, width=347, scroll=no");) | [Greek (319)](javascript:window.open("/globalization/keyboards/kbdhe319.html", "_blank", "height=130, width=347, scroll=no");) | [Greek (319) Latin](javascript:window.open("/globalization/keyboards/kbdhela3.html", "_blank", "height=130, width=347, scroll=no");) | [Greek Latin](javascript:window.open("/globalization/keyboards/kbdgkl.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Greek Polytonic](javascript:window.open("/globalization/keyboards/kbdhept.html", "_blank", "height=130, width=347, scroll=no");) | [Greenlandic†](javascript:window.open("/globalization/keyboards/kbdgrlnd.html", "_blank", "height=130, width=347, scroll=no");) | [Gujarati*](javascript:window.open("/globalization/keyboards/kbdinguj.html", "_blank", "height=130, width=347, scroll=no");) | [Hausa‡](javascript:window.open("/globalization/keyboards/kbdhau.html", "_blank", "height=130, width=347, scroll=no");) | [Hebrew](javascript:window.open("/globalization/keyboards/kbdheb.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Hindi Traditional](javascript:window.open("/globalization/keyboards/kbdinhin.html", "_blank", "height=130, width=347, scroll=no");) | [Hungarian](javascript:window.open("/globalization/keyboards/kbdhu.html", "_blank", "height=130, width=347, scroll=no");) | [Hungarian 101-key](javascript:window.open("/globalization/keyboards/kbdhu1.html", "_blank", "height=130, width=347, scroll=no");) | [Icelandic](javascript:window.open("/globalization/keyboards/kbdic.html", "_blank", "height=130, width=347, scroll=no");) | [Igbo‡](javascript:window.open("/globalization/keyboards/kbdibo.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Inuktitut - Latin†](javascript:window.open("/globalization/keyboards/kbdiulat.html", "_blank", "height=130, width=347, scroll=no");) | [Inuktitut - Naqittuat†](javascript:window.open("/globalization/keyboards/kbdinuk2.html", "_blank", "height=130, width=347, scroll=no");) | [Irish](javascript:window.open("/globalization/keyboards/kbdir.html", "_blank", "height=130, width=347, scroll=no");) | [Italian](javascript:window.open("/globalization/keyboards/kbdit.html", "_blank", "height=130, width=347, scroll=no");) | [Italian (142)](javascript:window.open("/globalization/keyboards/kbdit142.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Japanese](javascript:window.open("/globalization/keyboards/kbdJapan.html", "_blank", "height=130, width=347, scroll=no");) | [Kannada*](javascript:window.open("/globalization/keyboards/kbdinkan.html", "_blank", "height=130, width=347, scroll=no");) | [Kazakh](javascript:window.open("/globalization/keyboards/kbdkaz.html", "_blank", "height=130, width=347, scroll=no");) | [Korean](javascript:window.open("/globalization/keyboards/kbdKorea.html", "_blank", "height=130, width=347, scroll=no");) | [Kyrgyz (Cyrillic)*](javascript:window.open("/globalization/keyboards/kbdKyr.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Lao†](javascript:window.open("/globalization/keyboards/kbdlao.html", "_blank", "height=130, width=347, scroll=no");) | [Latin American](javascript:window.open("/globalization/keyboards/kbdla.html", "_blank", "height=130, width=347, scroll=no");) | [Latvian](javascript:window.open("/globalization/keyboards/kbdlv.html", "_blank", "height=130, width=347, scroll=no");) | [Latvian (QWERTY)](javascript:window.open("/globalization/keyboards/kbdlv1.html", "_blank", "height=130, width=347, scroll=no");) | [Lithuanian](javascript:window.open("/globalization/keyboards/kbdlt1.html", "_blank", "height=130, width=347, scroll=no");) 
-| [Lithuanian IBM](javascript:window.open("/globalization/keyboards/kbdlt.html", "_blank", "height=130, width=347, scroll=no");) | [Lithuanian Standard†](javascript:window.open("/globalization/keyboards/kbdlt2.html", "_blank", "height=130, width=347, scroll=no");) | [Luxembourgish†](javascript:window.open("/globalization/keyboards/kbdsf.html", "_blank", "height=130, width=347, scroll=no");) | [Macedonian (FYROM)](javascript:window.open("/globalization/keyboards/kbdmac.html", "_blank", "height=130, width=347, scroll=no");) | [Macedonian (FYROM) - Standard†](javascript:window.open("/globalization/keyboards/kbdmacst.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Malayalam**](javascript:window.open("/globalization/keyboards/kbdinmal.html", "_blank", "height=130, width=347, scroll=no");) | [Maori**](javascript:window.open("/globalization/keyboards/kbdmaori.html", "_blank", "height=130, width=347, scroll=no");) | [Maltese 47**](javascript:window.open("/globalization/keyboards/kbdmlt47.html", "_blank", "height=130, width=347, scroll=no");) | [Maltese 48**](javascript:window.open("/globalization/keyboards/kbdmlt48.html", "_blank", "height=130, width=347, scroll=no");) | [Maori†](javascript:window.open("/globalization/keyboards/kbdmaori.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Marathi](javascript:window.open("/globalization/keyboards/kbdinmar.html", "_blank", "height=130, width=347, scroll=no");) | [Mongolian (Cyrillic)*](javascript:window.open("/globalization/keyboards/kbdmon.html", "_blank", "height=130, width=347, scroll=no");) | [Mongolian (Mongolian Script)†](javascript:window.open("/globalization/keyboards/kbdmonmo.html", "_blank", "height=130, width=347, scroll=no");) | [Nepali†](javascript:window.open("/globalization/keyboards/kbdnepr.html", "_blank", "height=130, width=347, scroll=no");) | [Norwegian](javascript:window.open("/globalization/keyboards/kbdno.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Norwegian with Sami**](javascript:window.open("/globalization/keyboards/kbdno1.html", "_blank", "height=130, width=347, scroll=no");) | [Oriya†](javascript:window.open("/globalization/keyboards/kbdinori.html", "_blank", "height=130, width=347, scroll=no");) | [Pashto (Afghanistan)†](javascript:window.open("/globalization/keyboards/kbdpash.html", "_blank", "height=130, width=347, scroll=no");) | [Persian](javascript:window.open("/globalization/keyboards/kbdfa.html", "_blank", "height=130, width=347, scroll=no");) | [Polish (214)](javascript:window.open("/globalization/keyboards/kbdpl.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Polish (Programmers)](javascript:window.open("/globalization/keyboards/kbdpl1.html", "_blank", "height=130, width=347, scroll=no");) | [Portuguese](javascript:window.open("/globalization/keyboards/kbdpo.html", "_blank", "height=130, width=347, scroll=no");) | [Portuguese (Brazilian ABNT)](javascript:window.open("/globalization/keyboards/kbdbr.html", "_blank", "height=130, width=347, scroll=no");) | [Punjabi (Gurmukhi)*](javascript:window.open("/globalization/keyboards/kbdinpun.html", "_blank", "height=130, width=347, scroll=no");) | [Romanian (Legacy)](javascript:window.open("/globalization/keyboards/kbdro.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Romanian (Programmers)†](javascript:window.open("/globalization/keyboards/kbdropr.html", "_blank", "height=130, width=347, scroll=no");) | [Romanian (Standard)†](javascript:window.open("/globalization/keyboards/kbdrost.html", "_blank", "height=130, width=347, scroll=no");) | [Russian](javascript:window.open("/globalization/keyboards/kbdru.html", "_blank", "height=130, width=347, scroll=no");) | [Russian (Typewriter)](javascript:window.open("/globalization/keyboards/kbdru1.html", "_blank", "height=130, width=347, scroll=no");) | [Sami Extended Finland-Sweden**](javascript:window.open("/globalization/keyboards/kbdsmsfi.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Sami Extended Norway**](javascript:window.open("/globalization/keyboards/kbdsmsno.html", "_blank", "height=130, width=347, scroll=no");) | [Serbian (Cyrillic)](javascript:window.open("/globalization/keyboards/kbdycc.html", "_blank", "height=130, width=347, scroll=no");) | [Serbian (Latin)](javascript:window.open("/globalization/keyboards/kbdycl.html", "_blank", "height=130, width=347, scroll=no");) | [Sesotho sa Leboa‡](javascript:window.open("/globalization/keyboards/kbdnso1.html", "_blank", "height=130, width=347, scroll=no");) | [Setawana‡](javascript:window.open("/globalization/keyboards/kbdnso.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Sinhala†](javascript:window.open("/globalization/keyboards/kbdsn1.html", "_blank", "height=130, width=347, scroll=no");) | [Sinhala -Wij 9†](javascript:window.open("/globalization/keyboards/kbdsw09.html", "_blank", "height=130, width=347, scroll=no");) | [Slovak](javascript:window.open("/globalization/keyboards/kbdsl.html", "_blank", "height=130, width=347, scroll=no");) | [Slovak (QWERTY)](javascript:window.open("/globalization/keyboards/kbdsl1.html", "_blank", "height=130, width=347, scroll=no");) | [Slovenian](javascript:window.open("/globalization/keyboards/kbdcr.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Sorbian Extended†](javascript:window.open("/globalization/keyboards/kbdsorex.html", "_blank", "height=130, width=347, scroll=no");) | [Sorbian Standard‡](javascript:window.open("/globalization/keyboards/kbdsors1.html", "_blank", "height=130, width=347, scroll=no");) | [Sorbian Standard (Legacy)†](javascript:window.open("/globalization/keyboards/kbdsorst.html", "_blank", "height=130, width=347, scroll=no");) | [Spanish](javascript:window.open("/globalization/keyboards/kbdsp.html", "_blank", "height=130, width=347, scroll=no");) | [Spanish Variation](javascript:window.open("/globalization/keyboards/kbdes.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Swedish](javascript:window.open("/globalization/keyboards/kbdsw.html", "_blank", "height=130, width=347, scroll=no");) | [Swedish with Sami](javascript:window.open("/globalization/keyboards/kbdsw1.html", "_blank", "height=130, width=347, scroll=no");) | [Swiss French](javascript:window.open("/globalization/keyboards/kbdsf.html", "_blank", "height=130, width=347, scroll=no");) | [Swiss German](javascript:window.open("/globalization/keyboards/kbdsg.html", "_blank", "height=130, width=347, scroll=no");) | [Syriac Standard*](javascript:window.open("/globalization/keyboards/kbdsyr1.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Syriac Phonetic*](javascript:window.open("/globalization/keyboards/kbdsyr2.html", "_blank", "height=130, width=347, scroll=no");) | [Tajik†](javascript:window.open("/globalization/keyboards/kbdtajik.html", "_blank", "height=130, width=347, scroll=no");) | [Tamil](javascript:window.open("/globalization/keyboards/kbdintam.html", "_blank", "height=130, width=347, scroll=no");) | [Tatar](javascript:window.open("/globalization/keyboards/kbdtat.html", "_blank", "height=130, width=347, scroll=no");) | [Telugu*](javascript:window.open("/globalization/keyboards/kbdintel.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Thai Kedmanee](javascript:window.open("/globalization/keyboards/kbdth0.html", "_blank", "height=130, width=347, scroll=no");) | [Thai Kedmanee (non-ShiftLock)](javascript:window.open("/globalization/keyboards/kbdth2.html", "_blank", "height=130, width=347, scroll=no");) | [Thai Pattachote](javascript:window.open("/globalization/keyboards/kbdth1.html", "_blank", "height=130, width=347, scroll=no");) | [Thai Pattachote (non-ShiftLock)](javascript:window.open("/globalization/keyboards/kbdth3.html", "_blank", "height=130, width=347, scroll=no");) | [Tibetan (PRC)‡](javascript:window.open("/globalization/keyboards/kbdtiprc.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Turkish F](javascript:window.open("/globalization/keyboards/kbdtuf.html", "_blank", "height=130, width=347, scroll=no");) | [Turkish Q](javascript:window.open("/globalization/keyboards/kbdtuq.html", "_blank", "height=130, width=347, scroll=no");) | [Turkmen†](javascript:window.open("/globalization/keyboards/kbdturme.html", "_blank", "height=130, width=347, scroll=no");) | [Ukrainian](javascript:window.open("/globalization/keyboards/kbdur.html", "_blank", "height=130, width=347, scroll=no");) | [Ukrainian (Enhanced)†](javascript:window.open("/globalization/keyboards/kbdur1.html", "_blank", "height=130, width=347, scroll=no");) |
-| [United Kingdom](javascript:window.open("/globalization/keyboards/kbduk.html", "_blank", "height=130, width=347, scroll=no");) | [United Kingdom Extended**](javascript:window.open("/globalization/keyboards/kbdukx.html", "_blank", "height=130, width=347, scroll=no");) | [Urdu](javascript:window.open("/globalization/keyboards/kbdurdu.html", "_blank", "height=130, width=347, scroll=no");) | [US English](javascript:window.open("/globalization/keyboards/kbdus.html", "_blank", "height=130, width=347, scroll=no");) | [US English (IBM Arabic 238_L)](javascript:window.open("/globalization/keyboards/kbdusa.html", "_blank", "height=130, width=347, scroll=no");) |
-| [US-Dvorak](javascript:window.open("/globalization/keyboards/kbddv.html", "_blank", "height=130, width=347, scroll=no");) | [US-Dvorak for left hand](javascript:window.open("/globalization/keyboards/kbdusl.html", "_blank", "height=130, width=347, scroll=no");) | [US-Dvorak for right hand](javascript:window.open("/globalization/keyboards/kbdusr.html", "_blank", "height=130, width=347, scroll=no");) | [US-International](javascript:window.open("/globalization/keyboards/kbdusx.html", "_blank", "height=130, width=347, scroll=no");) | [Uyghur‡](javascript:window.open("/globalization/keyboards/kbdughr1.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Uyghur (Legacy)†](javascript:window.open("/globalization/keyboards/kbdughr.html", "_blank", "height=130, width=347, scroll=no");) | [Uzbek Cyrillic](javascript:window.open("/globalization/keyboards/kbduzb.html", "_blank", "height=130, width=347, scroll=no");) | [Vietnamese](javascript:window.open("/globalization/keyboards/kbdvntc.html", "_blank", "height=130, width=347, scroll=no");) | [Wolof‡](javascript:window.open("/globalization/keyboards/kbdwol.html", "_blank", "height=130, width=347, scroll=no");) | [Yakut‡](javascript:window.open("/globalization/keyboards/kbdyak.html", "_blank", "height=130, width=347, scroll=no");) |
-| [Yoruba‡](javascript:window.open("/globalization/keyboards/kbdyba.html", "_blank", "height=130, width=347, scroll=no");) | | | | |
-
-If you use a pop-up blocker, please update your allowable list to include this Web site.
-
-To see different keyboard states, move the mouse over state keys such as **Shift, Caps** or **AltGr**. You can also lock or unlock those keys by clicking them.
-
-Layouts shipped in Windows XP and Windows Server 2003 are marked by an asterisk (\*).
-
-Layouts shipped in Windows XP Service Pack 2 are marked by (\*\*).
-
-Layouts shipped in Windows Vista and Windows Server 2008 are marked by (†).
-
-Layouts shipped in Windows 7 and Windows Server 2008 R2 are marked by (‡).
+| &nbsp; | Keyboard Name | Keyboard identifier | Introduced |
+| ------ | ------------- | ---------- | ---------- |
+| <a name="A"></a>A | [ADLaM](keyboards/kbdadlm.md) | 00140C00 | 10 |
+| &nbsp; | [Albanian](keyboards/kbdal.md) | 0000041C | pre-XP |
+| &nbsp; | [Arabic (101)](keyboards/kbda1.md) | 00000401 | pre-XP |
+| &nbsp; | [Arabic (102)](keyboards/kbda2.md) | 00010401 | pre-XP |
+| &nbsp; | [Arabic (102) AZERTY](keyboards/kbda3.md) | 00020401 | pre-XP |
+| &nbsp; | [Armenian Eastern (Legacy)](keyboards/kbdarme.md) | 0000042B | pre-XP |
+| &nbsp; | [Armenian Phonetic](keyboards/kbdarmph.md) | 0002042B | 8 |
+| &nbsp; | [Armenian Typewriter](keyboards/kbdarmty.md) | 0003042B | 8 |
+| &nbsp; | [Armenian Western (Legacy)](keyboards/kbdarmw.md) | 0001042B | pre-XP |
+| &nbsp; | [Assamese - INSCRIPT](keyboards/kbdinasa.md) | 0000044D | Vista / Server 2008 |
+| &nbsp; | [Azerbaijani (Standard)](keyboards/kbdazst.md) | 0001042C | 8.1 |
+| &nbsp; | [Azerbaijani Cyrillic](keyboards/kbdaze.md) | 0000082C | pre-XP |
+| &nbsp; | [Azerbaijani Latin](keyboards/kbdazel.md) | 0000042C | pre-XP |
+| <a name="B"></a>B | [Bangla](keyboards/kbdinben.md) | 00000445 | pre-XP |
+| &nbsp; | [Bangla - INSCRIPT](keyboards/kbdinbe2.md) | 00020445 | Vista / Server 2008 |
+| &nbsp; | [Bangla - INSCRIPT (Legacy)](keyboards/kbdinbe1.md) | 00010445 | XP SP2 |
+| &nbsp; | [Bashkir](keyboards/kbdbash.md) | 0000046D | Vista / Server 2008 |
+| &nbsp; | [Belarusian](keyboards/kbdblr.md) | 00000423 | pre-XP |
+| &nbsp; | [Belgian (Comma)](keyboards/kbdbene.md) | 0001080C | pre-XP |
+| &nbsp; | [Belgian (Period)](keyboards/kbdbe_1.md) | 00000813 | 8.1 |
+| &nbsp; | [Belgian French](keyboards/kbdbe_2.md) | 0000080C | pre-XP |
+| &nbsp; | [Bosnian (Cyrillic)](keyboards/kbdbhc.md) | 0000201A | 8 |
+| &nbsp; | [Buginese](keyboards/kbdbug.md) | 000B0C00 | 8.1 |
+| &nbsp; | [Bulgarian](keyboards/kbdbulg.md) | 00030402 | 8 |
+| &nbsp; | [Bulgarian (Latin)](keyboards/kbdus_1.md) | 00010402 | 8.1 |
+| &nbsp; | [Bulgarian (Phonetic Traditional)](keyboards/kbdbgph1.md) | 00040402 | 7 / Server 2008 R2 |
+| &nbsp; | [Bulgarian (Phonetic)](keyboards/kbdbgph.md) | 00020402 | Vista / Server 2008 |
+| &nbsp; | [Bulgarian (Typewriter)](keyboards/kbdbu.md) | 00000402 | Vista / Server 2008 |
+| <a name="C"></a>C | [Canadian French](keyboards/kbdca.md) | 00001009 | pre-XP |
+| &nbsp; | [Canadian French (Legacy)](keyboards/kbdfc.md) | 00000C0C | pre-XP |
+| &nbsp; | [Canadian Multilingual Standard](keyboards/kbdcan.md) | 00011009 | pre-XP |
+| &nbsp; | [Central Atlas Tamazight](keyboards/kbdtzm.md) | 0000085F | 8.1 |
+| &nbsp; | [Central Kurdish](keyboards/kbdkurd.md) | 00000492 | 8 |
+| &nbsp; | [Cherokee Nation](keyboards/kbdcher.md) | 0000045C | 8 |
+| &nbsp; | [Cherokee Phonetic](keyboards/kbdcherp.md) | 0001045C | 8 |
+| &nbsp; | [Chinese (Simplified) - US](keyboards/kbdus_2.md) | 00000804 | 8.1 |
+| &nbsp; | [Chinese (Simplified, Singapore) - US](keyboards/kbdus_3.md) | 00001004 | 8.1 |
+| &nbsp; | [Chinese (Traditional) - US](keyboards/kbdus_4.md) | 00000404 | 8.1 |
+| &nbsp; | [Chinese (Traditional, Hong Kong S.A.R.) - US](keyboards/kbdus_5.md) | 00000C04 | 8.1 |
+| &nbsp; | [Chinese (Traditional, Macao S.A.R.) - US](keyboards/kbdus_6.md) | 00001404 | 8.1 |
+| &nbsp; | [Czech](keyboards/kbdcz.md) | 00000405 | pre-XP |
+| &nbsp; | [Czech (QWERTY)](keyboards/kbdcz1.md) | 00010405 | pre-XP |
+| &nbsp; | [Czech Programmers](keyboards/kbdcz2.md) | 00020405 | pre-XP |
+| <a name="D"></a>D | [Danish](keyboards/kbdda.md) | 00000406 | pre-XP |
+| &nbsp; | [Devanagari - INSCRIPT](keyboards/kbdindev.md) | 00000439 | pre-XP |
+| &nbsp; | [Divehi Phonetic](keyboards/kbddiv1.md) | 00000465 | XP / Server 2003 |
+| &nbsp; | [Divehi Typewriter](keyboards/kbddiv2.md) | 00010465 | XP / Server 2003 |
+| &nbsp; | [Dutch](keyboards/kbdne.md) | 00000413 | pre-XP |
+| &nbsp; | [Dzongkha](keyboards/kbddzo.md) | 00000C51 | 10 |
+| <a name="E"></a>E | [English (India)](keyboards/kbdinen.md) | 00004009 | 8 |
+| &nbsp; | [Estonian](keyboards/kbdest.md) | 00000425 | pre-XP |
+| <a name="F"></a>F | [Faeroese](keyboards/kbdfo.md) | 00000438 | pre-XP |
+| &nbsp; | [Finnish](keyboards/kbdfi.md) | 0000040B | pre-XP |
+| &nbsp; | [Finnish with Sami](keyboards/kbdfi1_1.md) | 0001083B | XP SP2 |
+| &nbsp; | [French](keyboards/kbdfr.md) | 0000040C | pre-XP |
+| &nbsp; | [Futhark](keyboards/kbdfthrk.md) | 00120C00 | 8.1 |
+| <a name="G"></a>G | [Georgian (Ergonomic)](keyboards/kbdgeoer.md) | 00020437 | Vista / Server 2008 |
+| &nbsp; | [Georgian (Legacy)](keyboards/kbdgeo.md) | 00000437 | pre-XP |
+| &nbsp; | [Georgian (MES)](keyboards/kbdgeome.md) | 00030437 | 8 |
+| &nbsp; | [Georgian (Old Alphabets)](keyboards/kbdgeooa.md) | 00040437 | 8 |
+| &nbsp; | [Georgian (QWERTY)](keyboards/kbdgeoqw.md) | 00010437 | Vista / Server 2008 |
+| &nbsp; | [German](keyboards/kbdgr.md) | 00000407 | pre-XP |
+| &nbsp; | [German (IBM)](keyboards/kbdgr1.md) | 00010407 | pre-XP |
+| &nbsp; | [Gothic](keyboards/kbdgthc.md) | 000C0C00 | 8.1 |
+| &nbsp; | [Greek](keyboards/kbdhe.md) | 00000408 | pre-XP |
+| &nbsp; | [Greek (220)](keyboards/kbdhe220.md) | 00010408 | pre-XP |
+| &nbsp; | [Greek (220) Latin](keyboards/kbdhela2.md) | 00030408 | pre-XP |
+| &nbsp; | [Greek (319)](keyboards/kbdhe319.md) | 00020408 | pre-XP |
+| &nbsp; | [Greek (319) Latin](keyboards/kbdhela3.md) | 00040408 | pre-XP |
+| &nbsp; | [Greek Latin](keyboards/kbdgkl.md) | 00050408 | pre-XP |
+| &nbsp; | [Greek Polytonic](keyboards/kbdhept.md) | 00060408 | pre-XP |
+| &nbsp; | [Greenlandic](keyboards/kbdgrlnd.md) | 0000046F | Vista / Server 2008 |
+| &nbsp; | [Guarani](keyboards/kbdgn.md) | 00000474 | 8.1 |
+| &nbsp; | [Gujarati](keyboards/kbdinguj.md) | 00000447 | XP / Server 2003 |
+| <a name="H"></a>H | [Hausa](keyboards/kbdhau.md) | 00000468 | 7 / Server 2008 R2 |
+| &nbsp; | [Hawaiian](keyboards/kbdhaw.md) | 00000475 | 8 |
+| &nbsp; | [Hebrew](keyboards/kbdheb.md) | 0000040D | pre-XP |
+| &nbsp; | [Hebrew (Standard)](keyboards/kbdhebl3.md) | 0002040D | 8 |
+| &nbsp; | [Hindi Traditional](keyboards/kbdinhin.md) | 00010439 | pre-XP |
+| &nbsp; | [Hungarian](keyboards/kbdhu.md) | 0000040E | pre-XP |
+| &nbsp; | [Hungarian 101-key](keyboards/kbdhu1.md) | 0001040E | pre-XP |
+| <a name="I"></a>I | [Icelandic](keyboards/kbdic.md) | 0000040F | pre-XP |
+| &nbsp; | [Igbo](keyboards/kbdibo.md) | 00000470 | 7 / Server 2008 R2 |
+| &nbsp; | [Inuktitut - Latin](keyboards/kbdiulat.md) | 0000085D | Vista / Server 2008 |
+| &nbsp; | [Inuktitut - Naqittaut](keyboards/kbdinuk2.md) | 0001045D | Vista / Server 2008 |
+| &nbsp; | [Irish](keyboards/kbdir.md) | 00001809 | pre-XP |
+| &nbsp; | [Italian](keyboards/kbdit.md) | 00000410 | pre-XP |
+| &nbsp; | [Italian (142)](keyboards/kbdit142.md) | 00010410 | pre-XP |
+| <a name="J"></a>J | [Japanese](keyboards/kbdjpn.md) | 00000411 | pre-XP |
+| &nbsp; | [Javanese](keyboards/kbdjav.md) | 00110C00 | 8.1 |
+| <a name="K"></a>K | [Kannada](keyboards/kbdinkan.md) | 0000044B | XP / Server 2003 |
+| &nbsp; | [Kazakh](keyboards/kbdkaz.md) | 0000043F | pre-XP |
+| &nbsp; | [Khmer](keyboards/kbdkhmr.md) | 00000453 | 8 |
+| &nbsp; | [Khmer (NIDA)](keyboards/kbdkni.md) | 00010453 | 8 |
+| &nbsp; | [Korean](keyboards/kbdkor.md) | 00000412 | pre-XP |
+| &nbsp; | [Kyrgyz Cyrillic](keyboards/kbdkyr.md) | 00000440 | XP / Server 2003 |
+| <a name="L"></a>L | [Lao](keyboards/kbdlao.md) | 00000454 | Vista / Server 2008 |
+| &nbsp; | [Latin American](keyboards/kbdla.md) | 0000080A | pre-XP |
+| &nbsp; | [Latvian](keyboards/kbdlv.md) | 00000426 | pre-XP |
+| &nbsp; | [Latvian (QWERTY)](keyboards/kbdlv1.md) | 00010426 | pre-XP |
+| &nbsp; | [Latvian (Standard)](keyboards/kbdlvst.md) | 00020426 | 8.1 |
+| &nbsp; | [Lisu (Basic)](keyboards/kbdlisub.md) | 00070C00 | 8 |
+| &nbsp; | [Lisu (Standard)](keyboards/kbdlisus.md) | 00080C00 | 8 |
+| &nbsp; | [Lithuanian](keyboards/kbdlt1.md) | 00010427 | pre-XP |
+| &nbsp; | [Lithuanian IBM](keyboards/kbdlt.md) | 00000427 | pre-XP |
+| &nbsp; | [Lithuanian Standard](keyboards/kbdlt2.md) | 00020427 | Vista / Server 2008 |
+| &nbsp; | [Luxembourgish](keyboards/kbdsf_1.md) | 0000046E | Vista / Server 2008 |
+| <a name="M"></a>M | [Macedonian (North Macedonia)](keyboards/kbdmac.md) | 0000042F | pre-XP |
+| &nbsp; | [Macedonian (North Macedonia) - Standard](keyboards/kbdmacst.md) | 0001042F | Vista / Server 2008 |
+| &nbsp; | [Malayalam](keyboards/kbdinmal.md) | 0000044C | XP SP2 |
+| &nbsp; | [Maltese 47-Key](keyboards/kbdmlt47.md) | 0000043A | XP SP2 |
+| &nbsp; | [Maltese 48-Key](keyboards/kbdmlt48.md) | 0001043A | XP SP2 |
+| &nbsp; | [Maori](keyboards/kbdmaori.md) | 00000481 | XP SP2 |
+| &nbsp; | [Marathi](keyboards/kbdinmar.md) | 0000044E | pre-XP |
+| &nbsp; | [Mongolian (Mongolian Script)](keyboards/kbdmonmo.md) | 00000850 | Vista / Server 2008 |
+| &nbsp; | [Mongolian Cyrillic](keyboards/kbdmon.md) | 00000450 | XP / Server 2003 |
+| &nbsp; | [Myanmar (Phonetic order)](keyboards/kbdmyan_1.md) | 00010C00 | 10 |
+| &nbsp; | [Myanmar (Visual order)](keyboards/kbdmyan_2.md) | 00130C00 | 10 |
+| <a name="N"></a>N | [Nepali](keyboards/kbdnepr.md) | 00000461 | Vista / Server 2008 |
+| &nbsp; | [New Tai Lue](keyboards/kbdntl.md) | 00020C00 | 8 |
+| &nbsp; | [N&#x2019;Ko](keyboards/kbdnko.md) | 00090C00 | 8 |
+| &nbsp; | [Norwegian](keyboards/kbdno.md) | 00000414 | pre-XP |
+| &nbsp; | [Norwegian with Sami](keyboards/kbdno1.md) | 0000043B | XP SP2 |
+| &nbsp; | [NZ Aotearoa](keyboards/kbdmaori_NZAotearoa.md) | 00001409 | 11 |
+| <a name="O"></a>O | [Odia](keyboards/kbdinori.md) | 00000448 | Vista / Server 2008 |
+| &nbsp; | [Ogham](keyboards/kbdogham.md) | 00040C00 | 8 |
+| &nbsp; | [Ol Chiki](keyboards/kbdolch.md) | 000D0C00 | 8.1 |
+| &nbsp; | [Old Italic](keyboards/kbdoldit.md) | 000F0C00 | 8.1 |
+| &nbsp; | [Osage](keyboards/kbdosa.md) | 00150C00 | 10 |
+| &nbsp; | [Osmanya](keyboards/kbdosm.md) | 000E0C00 | 8.1 |
+| <a name="P"></a>P | [Pashto (Afghanistan)](keyboards/kbdpash.md) | 00000463 | Vista / Server 2008 |
+| &nbsp; | [Persian](keyboards/kbdfa.md) | 00000429 | pre-XP |
+| &nbsp; | [Persian (Standard)](keyboards/kbdfar.md) | 00050429 | 8 |
+| &nbsp; | [Phags-pa](keyboards/kbdphags.md) | 000A0C00 | 8 |
+| &nbsp; | [Polish (214)](keyboards/kbdpl.md) | 00010415 | pre-XP |
+| &nbsp; | [Polish (Programmers)](keyboards/kbdpl1.md) | 00000415 | pre-XP |
+| &nbsp; | [Portuguese](keyboards/kbdpo.md) | 00000816 | pre-XP |
+| &nbsp; | [Portuguese (Brazil ABNT)](keyboards/kbdbr_1.md) | 00000416 | pre-XP |
+| &nbsp; | [Portuguese (Brazil ABNT2)](keyboards/kbdbr_2.md) | 00010416 | 8.1 |
+| &nbsp; | [Punjabi](keyboards/kbdinpun.md) | 00000446 | XP / Server 2003 |
+| <a name="R"></a>R | [Romanian (Legacy)](keyboards/kbdro.md) | 00000418 | pre-XP |
+| &nbsp; | [Romanian (Programmers)](keyboards/kbdropr.md) | 00020418 | Vista / Server 2008 |
+| &nbsp; | [Romanian (Standard)](keyboards/kbdrost.md) | 00010418 | Vista / Server 2008 |
+| &nbsp; | [Russian](keyboards/kbdru.md) | 00000419 | pre-XP |
+| &nbsp; | [Russian - Mnemonic](keyboards/kbdrum.md) | 00020419 | 8 |
+| &nbsp; | [Russian (Typewriter)](keyboards/kbdru1.md) | 00010419 | pre-XP |
+| <a name="S"></a>S | [Sakha](keyboards/kbdyak.md) | 00000485 | 7 / Server 2008 R2 |
+| &nbsp; | [Sami Extended Finland-Sweden](keyboards/kbdsmsfi.md) | 0002083B | XP SP2 |
+| &nbsp; | [Sami Extended Norway](keyboards/kbdsmsno.md) | 0001043B | XP SP2 |
+| &nbsp; | [Scottish Gaelic](keyboards/kbdgae.md) | 00011809 | pre-XP |
+| &nbsp; | [Serbian (Cyrillic)](keyboards/kbdycc.md) | 00000C1A | pre-XP |
+| &nbsp; | [Serbian (Latin)](keyboards/kbdycl.md) | 0000081A | pre-XP |
+| &nbsp; | [Sesotho sa Leboa](keyboards/kbdnso_1.md) | 0000046C | 7 / Server 2008 R2 |
+| &nbsp; | [Setswana](keyboards/kbdnso_2.md) | 00000432 | 7 / Server 2008 R2 |
+| &nbsp; | [Sinhala](keyboards/kbdsn1.md) | 0000045B | Vista / Server 2008 |
+| &nbsp; | [Sinhala - Wij 9](keyboards/kbdsw09.md) | 0001045B | Vista / Server 2008 |
+| &nbsp; | [Slovak](keyboards/kbdsl.md) | 0000041B | pre-XP |
+| &nbsp; | [Slovak (QWERTY)](keyboards/kbdsl1.md) | 0001041B | pre-XP |
+| &nbsp; | [Slovenian](keyboards/kbdcr_1.md) | 00000424 | pre-XP |
+| &nbsp; | [Sora](keyboards/kbdsora.md) | 00100C00 | 8.1 |
+| &nbsp; | [Sorbian Extended](keyboards/kbdsorex.md) | 0001042E | Vista / Server 2008 |
+| &nbsp; | [Sorbian Standard](keyboards/kbdsors1.md) | 0002042E | 7 / Server 2008 R2 |
+| &nbsp; | [Sorbian Standard (Legacy)](keyboards/kbdsorst.md) | 0000042E | Vista / Server 2008 |
+| &nbsp; | [Spanish](keyboards/kbdsp.md) | 0000040A | pre-XP |
+| &nbsp; | [Spanish Variation](keyboards/kbdes.md) | 0001040A | pre-XP |
+| &nbsp; | [Standard](keyboards/kbdcr_2.md) | 0000041A | 10 |
+| &nbsp; | [Swedish](keyboards/kbdsw.md) | 0000041D | pre-XP |
+| &nbsp; | [Swedish with Sami](keyboards/kbdfi1_2.md) | 0000083B | pre-XP |
+| &nbsp; | [Swiss French](keyboards/kbdsf_2.md) | 0000100C | pre-XP |
+| &nbsp; | [Swiss German](keyboards/kbdsg.md) | 00000807 | pre-XP |
+| &nbsp; | [Syriac](keyboards/kbdsyr1.md) | 0000045A | XP / Server 2003 |
+| &nbsp; | [Syriac Phonetic](keyboards/kbdsyr2.md) | 0001045A | XP / Server 2003 |
+| <a name="T"></a>T | [Tai Le](keyboards/kbdtaile.md) | 00030C00 | 8 |
+| &nbsp; | [Tajik](keyboards/kbdtajik.md) | 00000428 | Vista / Server 2008 |
+| &nbsp; | [Tamil](keyboards/kbdintam.md) | 00000449 | pre-XP |
+| &nbsp; | [Tamil 99](keyboards/kbdtam99.md) | 00020449 | 10 |
+| &nbsp; | [Tamil Anjal](keyboards/kbdinen_TamilAnjal.md) | 00030449 | 11 |
+| &nbsp; | [Tatar](keyboards/kbdtt102.md) | 00010444 | 8.1 |
+| &nbsp; | [Tatar (Legacy)](keyboards/kbdtat.md) | 00000444 | 8 |
+| &nbsp; | [Telugu](keyboards/kbdintel.md) | 0000044A | XP / Server 2003 |
+| &nbsp; | [Thai Kedmanee](keyboards/kbdth0.md) | 0000041E | pre-XP |
+| &nbsp; | [Thai Kedmanee (non-ShiftLock)](keyboards/kbdth2.md) | 0002041E | pre-XP |
+| &nbsp; | [Thai Pattachote](keyboards/kbdth1.md) | 0001041E | pre-XP |
+| &nbsp; | [Thai Pattachote (non-ShiftLock)](keyboards/kbdth3.md) | 0003041E | pre-XP |
+| &nbsp; | [Tibetan (PRC)](keyboards/kbdtiprc.md) | 00000451 | 7 / Server 2008 R2 |
+| &nbsp; | [Tibetan (PRC) - Updated](keyboards/kbdtiprd.md) | 00010451 | 8.1 |
+| &nbsp; | [Tifinagh (Basic)](keyboards/kbdtifi.md) | 0000105F | 8 |
+| &nbsp; | [Tifinagh (Extended)](keyboards/kbdtifi2.md) | 0001105F | 8 |
+| &nbsp; | [Traditional Mongolian (Standard)](keyboards/kbdmonst.md) | 00010850 | 8.1 |
+| &nbsp; | [Turkish F](keyboards/kbdtuf.md) | 0001041F | pre-XP |
+| &nbsp; | [Turkish Q](keyboards/kbdtuq.md) | 0000041F | pre-XP |
+| &nbsp; | [Turkmen](keyboards/kbdturme.md) | 00000442 | Vista / Server 2008 |
+| <a name="U"></a>U | [Ukrainian](keyboards/kbdur.md) | 00000422 | pre-XP |
+| &nbsp; | [Ukrainian (Enhanced)](keyboards/kbdur1.md) | 00020422 | Vista / Server 2008 |
+| &nbsp; | [United Kingdom](keyboards/kbduk.md) | 00000809 | pre-XP |
+| &nbsp; | [United Kingdom Extended](keyboards/kbdukx.md) | 00000452 | XP SP2 |
+| &nbsp; | [United States-Dvorak](keyboards/kbddv.md) | 00010409 | pre-XP |
+| &nbsp; | [United States-Dvorak for left hand](keyboards/kbdusl.md) | 00030409 | pre-XP |
+| &nbsp; | [United States-Dvorak for right hand](keyboards/kbdusr.md) | 00040409 | pre-XP |
+| &nbsp; | [United States-International](keyboards/kbdusx.md) | 00020409 | pre-XP |
+| &nbsp; | [Urdu](keyboards/kbdurdu.md) | 00000420 | pre-XP |
+| &nbsp; | [US](keyboards/kbdus_7.md) | 00000409 | pre-XP |
+| &nbsp; | [US English Table for IBM Arabic 238_L](keyboards/kbdusa.md) | 00050409 | pre-XP |
+| &nbsp; | [Uyghur](keyboards/kbdughr1.md) | 00010480 | 7 / Server 2008 R2 |
+| &nbsp; | [Uyghur (Legacy)](keyboards/kbdughr.md) | 00000480 | Vista / Server 2008 |
+| &nbsp; | [Uzbek Cyrillic](keyboards/kbduzb.md) | 00000843 | pre-XP |
+| <a name="V"></a>V | [Vietnamese](keyboards/kbdvntc.md) | 0000042A | pre-XP |
+| <a name="W"></a>W | [Wolof](keyboards/kbdwol.md) | 00000488 | 7 / Server 2008 R2 |
+| <a name="Y"></a>Y | [Yoruba](keyboards/kbdyba.md) | 0000046A | 7 / Server 2008 R2 |
 
 ## Related Links
 
--   [Create your own keyboard layout using Microsoft Keyboard Layout Creator](https://msdn.microsoft.com/goglobal/bb964665.aspx "Create your own keyboard layout using Microsoft Keyboard Layout Creator")
+- [Download Microsoft Keyboard Layout Creator](https://www.microsoft.com/download/details.aspx?id=102134 "Create your own keyboard layout using Microsoft Keyboard Layout Creator")

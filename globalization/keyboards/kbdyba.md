@@ -1,0 +1,15 @@
+---
+title: Yoruba Keyboard
+description: An interactive representation of the Windows Yoruba keyboard. To see different keyboard states, click or move the mouse over the state keys.
+ms.date: 04/26/2021
+ms.topic: ui-reference
+author: jowilco
+---
+
+# Yoruba Keyboard
+
+KLID: 0000046A
+
+To see different keyboard states, move the mouse over state keys such as **Shift**, **Caps** or **AltGr**. You can also lock or unlock those keys by clicking them.
+
+<iframe src="kbdyba.html" height="300"></iframe>

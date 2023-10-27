@@ -1,0 +1,1104 @@
+<HTML lang="en">
+<HEAD>
+    <TITLE>
+        Old Italic Keyboard Layout
+    </TITLE>
+    <META name="description" content="Old Italic Keyboard">
+    <META name="ms.locale" content="EN-US">
+    <META name="color-scheme" content="dark light">
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+    <META name="robots" content="noindex">
+    <SCRIPT LANGUAGE="JavaScript">
+        var State = 0;
+        var Clicked = 0;
+        document.addEventListener('DOMContentLoaded', SetBackgroundColor);
+        parent.window.addEventListener('theme-changed', SetBackgroundColor);
+        function SetBackgroundColor() {
+            var theme = localStorage.getItem('theme');
+            if (theme == 'dark') {
+                document.body.style.backgroundColor = '#171717';
+            }
+            if (theme == 'high-contrast') {
+                document.body.style.backgroundColor = '#000000';
+            }
+            if (theme == 'light') {
+                document.body.style.backgroundColor = '#FFFFFF';
+            }
+            else {
+                //docs.microsoft.com theme has not been set yet. Default to browser theme.
+            }
+
+        }
+        function chooseState(x) {
+            switch (State) {
+                case 0:
+                    document.all.normallower.style.display = 'none';
+                    break;
+                case 1:
+                    document.all.normalcaps.style.display = 'none';
+                    break;
+                case 2:
+                    document.all.shiftlower.style.display = 'none';
+                    break;
+                case 3:
+                    document.all.shiftcaps.style.display = 'none';
+                    break;
+                case 4:
+                    document.all.ctrllower.style.display = 'none';
+                    break;
+                case 5:
+                    document.all.ctrlcaps.style.display = 'none';
+                    break;
+                case 6:
+                    document.all.shiftctrllower.style.display = 'none';
+                    break;
+                case 7:
+                    document.all.shiftctrlcaps.style.display = 'none';
+                    break;
+                case 8:
+                case 12:
+                    document.all.ctrlaltlower.style.display = 'none';
+                    break;
+                case 9:
+                case 13:
+                    document.all.ctrlaltcaps.style.display = 'none';
+                    break;
+                case 10:
+                case 14:
+                    document.all.shiftctrlaltlower.style.display = 'none';
+                    break;
+                case 11:
+                case 15:
+                    document.all.shiftctrlaltcaps.style.display = 'none';
+                    break;
+                case 16:
+                    document.all.xxxxlower.style.display = 'none';
+                    break;
+                case 17:
+                    document.all.xxxxcaps.style.display = 'none';
+                    break;
+                case 18:
+                    document.all.shiftxxxxlower.style.display = 'none';
+                    break;
+                case 19:
+                    document.all.shiftxxxxcaps.style.display = 'none';
+                    break;
+                default:
+                    break;
+            }
+            switch (x) {
+                case 0:
+                    document.all.normallower.style.display = '';
+                    break;
+                case 1:
+                    document.all.normalcaps.style.display = '';
+                    break;
+                case 2:
+                    document.all.shiftlower.style.display = '';
+                    break;
+                case 3:
+                    document.all.shiftcaps.style.display = '';
+                    break;
+                case 4:
+                    document.all.ctrllower.style.display = '';
+                    break;
+                case 5:
+                    document.all.ctrlcaps.style.display = '';
+                    break;
+                case 6:
+                    document.all.shiftctrllower.style.display = '';
+                    break;
+                case 7:
+                    document.all.shiftctrlcaps.style.display = '';
+                    break;
+                case 8:
+                case 12:
+                    document.all.ctrlaltlower.style.display = '';
+                    break;
+                case 9:
+                case 13:
+                    document.all.ctrlaltcaps.style.display = '';
+                    break;
+                case 10:
+                case 14:
+                    document.all.shiftctrlaltlower.style.display = '';
+                    break;
+                case 11:
+                case 15:
+                    document.all.shiftctrlaltcaps.style.display = '';
+                    break;
+                case 16:
+                    document.all.xxxxlower.style.display = '';
+                    break;
+                case 17:
+                    document.all.xxxxcaps.style.display = '';
+                    break;
+                case 18:
+                    document.all.shiftxxxxlower.style.display = '';
+                    break;
+                case 19:
+                    document.all.shiftxxxxcaps.style.display = '';
+                    break;
+                default:
+                    break;
+            }
+        }
+        function keyOpen() {
+            document.all.loading.style.display = 'none';
+            document.all.normallower.style.display = '';
+        }
+        function MouseOver(x) {
+            if ((Clicked != 1) && ((State & x) == 0)) {
+                chooseState(State | x);
+            }
+            Clicked = 0;
+        }
+        function MouseOut(x) {
+            if ((State & x) == 0) {
+                State |= x;
+                chooseState(State ^ x);
+                State ^= x;
+            }
+        }
+        function Click(x) {
+            chooseState(State ^ x);
+            State ^= x;
+            if ((State & x) == 0) {
+                Clicked = 1;
+            }
+            else {
+                Clicked = 0;
+            }
+        }
+    </SCRIPT>
+</HEAD>
+<BODY onLoad="keyOpen()">
+    <div id="glosso" style="left: 0px; top: 0px; z-index:30; position:absolute; background:#EEEE99;border: 1pt
+        solid #000;color:#000000;font-family:arial,helvetica,geneva;font-size:11px;padding:2px;"></div>
+    <script type="text/javascript" language="javascript">
+        Xoffset = 10;    // modify these values to ...
+        Yoffset = 10;    // change the popup position.
+
+        var old, skn, iex = (document.all), yyy = -1000;
+
+        var ns4 = document.layers
+        var ns6 = document.getElementById && !document.all
+        var ie4 = document.all
+
+        if (window.opera) ns6 = true;
+
+        if (ns4)
+            skn = document.glosso
+        else if (ns6)
+            skn = document.getElementById("glosso").style
+        else if (ie4)
+            skn = document.all.glosso.style
+        if (ns4) document.captureEvents(Event.MOUSEMOVE);
+        else {
+            skn.visibility = "visible"
+            skn.display = "none"
+        }
+        document.onmousemove = get_mouse;
+        function popup(msg) {
+            var content = msg;
+            yyy = Yoffset;
+            if (ns4) { skn.document.write(content); skn.document.close(); skn.visibility = "visible" }
+            if (ns6) { document.getElementById("glosso").innerHTML = content; skn.display = '' }
+            //if(ie4){document.all("glosso").innerHTML=content;skn.display=''}
+        }
+        function get_mouse(e) {
+            var blont = document.getElementById("glosso").innerHTML;
+            var x = (ns4 || ns6) ? e.pageX : event.x + document.body.scrollLeft;
+            if ((x > 110) && (x < 220)) {
+                if (blont.length > 25) x -= 40;
+
+                x = x - 65;
+            }
+            if (x > 220) {
+                if (blont.length > 25) {
+                    x = x - 40;
+                }
+                if (blont.length > 45) {
+                    x = x - 40;
+                }
+                if (blont.length > 65) {
+                    x = x - 30;
+                }
+                x = x - 110;
+            }
+            skn.left = x + Xoffset;
+            var y = (ns4 || ns6) ? e.pageY : event.y + document.documentElement.scrollTop;
+            if (y > 65) {
+                y = y - 40;
+            } else {
+                y = y + 18;
+            }
+            skn.top = y;
+            //alert(content);
+        }
+        function kill() {
+            yyy = -1000;
+            if (ns4) { skn.visibility = "hidden"; }
+            else if (ns6 || ie4)
+                skn.display = "none"
+        }
+    </script>
+    <DIV ID=loading CLASS=loading>
+        <br><br><br>
+        <h3 align=center>Loading the keyboard layout, please wait....<h3>
+    </DIV>
+<DIV ID=normallower CLASS=normallower STYLE="display: none">
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/F0C00-VK_1-0-0.png" ALT="'U+10320 OLD ITALIC NUMERAL ONE'"  onmouseover = "popup('VK_1<br/>U+10320 OLD ITALIC NUMERAL ONE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/F0C00-VK_5-0-0.png" ALT="'U+10321 OLD ITALIC NUMERAL FIVE'"  onmouseover = "popup('VK_5<br/>U+10321 OLD ITALIC NUMERAL FIVE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/F0C00-VK_0-0-0.png" ALT="'U+10322 OLD ITALIC NUMERAL TEN'"  onmouseover = "popup('VK_0<br/>U+10322 OLD ITALIC NUMERAL TEN');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/F0C00-VK_OEM_MINUS-0-0.png" ALT="'U+10323 OLD ITALIC NUMERAL FIFTY'"  onmouseover = "popup('VK_OEM_MINUS<br/>U+10323 OLD ITALIC NUMERAL FIFTY');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG src="images/BackSp.png" ALT="Backspace key. U+0008 BACKSPACE" onmouseover = "popup('VK_BACK<br/>Backspace key.<br/>U+0008 BACKSPACE');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/Tab.png" ALT="Tab key. U+0009 CHARACTER TABULATION" onmouseover = "popup('VK_TAB<br/>Tab key.<br/>U+0009 CHARACTER TABULATION');" onmouseout="kill()" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_Q-0-0.png" ALT="'U+10312 OLD ITALIC LETTER KU'"  onmouseover = "popup('VK_Q<br/>U+10312 OLD ITALIC LETTER KU');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_E-0-0.png" ALT="'U+10304 OLD ITALIC LETTER E'"  onmouseover = "popup('VK_E<br/>U+10304 OLD ITALIC LETTER E');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_R-0-0.png" ALT="'U+10313 OLD ITALIC LETTER ER'"  onmouseover = "popup('VK_R<br/>U+10313 OLD ITALIC LETTER ER');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_T-0-0.png" ALT="'U+10315 OLD ITALIC LETTER TE'"  onmouseover = "popup('VK_T<br/>U+10315 OLD ITALIC LETTER TE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_U-0-0.png" ALT="'U+10316 OLD ITALIC LETTER U'"  onmouseover = "popup('VK_U<br/>U+10316 OLD ITALIC LETTER U');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_I-0-0.png" ALT="'U+10309 OLD ITALIC LETTER I'"  onmouseover = "popup('VK_I<br/>U+10309 OLD ITALIC LETTER I');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_O-0-0.png" ALT="'U+1030F OLD ITALIC LETTER O'"  onmouseover = "popup('VK_O<br/>U+1030F OLD ITALIC LETTER O');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_P-0-0.png" ALT="'U+10310 OLD ITALIC LETTER PE'"  onmouseover = "popup('VK_P<br/>U+10310 OLD ITALIC LETTER PE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/EnterX.png" ALT="Enter key. U+000D CARRIAGE RETURN (CR)" onmouseover = "popup('VK_RETURN<br/>Enter key.<br/>U+000D CARRIAGE RETURN (CR)');" onmouseout="kill()" WIDTH="60" HEIGHT="84" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/CapsLock.png" STYLE=cursor:hand ALT="Caps Lock key. Click to change keyboard state."  onClick=Click(1) onmouseover = "popup('VK_CAPITAL<br/>Caps Lock key.<br/>Click to change keyboard state.');MouseOver(1);" onmouseout="kill();MouseOut(1);" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_A-0-0.png" ALT="'U+10300 OLD ITALIC LETTER A'"  onmouseover = "popup('VK_A<br/>U+10300 OLD ITALIC LETTER A');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_S-0-0.png" ALT="'U+10314 OLD ITALIC LETTER ES'"  onmouseover = "popup('VK_S<br/>U+10314 OLD ITALIC LETTER ES');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_D-0-0.png" ALT="'U+10303 OLD ITALIC LETTER DE'"  onmouseover = "popup('VK_D<br/>U+10303 OLD ITALIC LETTER DE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_F-0-0.png" ALT="'U+10305 OLD ITALIC LETTER VE'"  onmouseover = "popup('VK_F<br/>U+10305 OLD ITALIC LETTER VE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_H-0-0.png" ALT="'U+10307 OLD ITALIC LETTER HE'"  onmouseover = "popup('VK_H<br/>U+10307 OLD ITALIC LETTER HE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_K-0-0.png" ALT="'U+1030A OLD ITALIC LETTER KA'"  onmouseover = "popup('VK_K<br/>U+1030A OLD ITALIC LETTER KA');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_L-0-0.png" ALT="'U+1030B OLD ITALIC LETTER EL'"  onmouseover = "popup('VK_L<br/>U+1030B OLD ITALIC LETTER EL');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/003a.png" ALT="U+003A COLON"  onmouseover = "popup('VK_OEM_1<br/>U+003A COLON');" onmouseout="kill();" WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/None.png" ALT="Blank key." WIDTH="40" HEIGHT="0" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position: relative; left: 0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/NarrowShift.png" STYLE=cursor:hand ALT="Shift key. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/F0C00-VK_Z-0-0.png" ALT="'U+10306 OLD ITALIC LETTER ZE'"  onmouseover = "popup('VK_Z<br/>U+10306 OLD ITALIC LETTER ZE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/F0C00-VK_X-0-0.png" ALT="'U+10317 OLD ITALIC LETTER EKS'"  onmouseover = "popup('VK_X<br/>U+10317 OLD ITALIC LETTER EKS');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/F0C00-VK_C-0-0.png" ALT="'U+10302 OLD ITALIC LETTER KE'"  onmouseover = "popup('VK_C<br/>U+10302 OLD ITALIC LETTER KE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/F0C00-VK_B-0-0.png" ALT="'U+10301 OLD ITALIC LETTER BE'"  onmouseover = "popup('VK_B<br/>U+10301 OLD ITALIC LETTER BE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/F0C00-VK_N-0-0.png" ALT="'U+1030D OLD ITALIC LETTER EN'"  onmouseover = "popup('VK_N<br/>U+1030D OLD ITALIC LETTER EN');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/F0C00-VK_M-0-0.png" ALT="'U+1030C OLD ITALIC LETTER EM'"  onmouseover = "popup('VK_M<br/>U+1030C OLD ITALIC LETTER EM');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/00b7.png" ALT="U+00B7 MIDDLE DOT"  onmouseover = "popup('VK_OEM_PERIOD<br/>U+00B7 MIDDLE DOT');" onmouseout="kill();" WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Shift.png" STYLE=cursor:hand ALT="Shift key. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="104" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position:relative; left:0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/Control.png" STYLE=cursor:hand ALT="Ctrl key." onmouseover = "popup('VK_CONTROL<br/>Ctrl key.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_LMENU<br/>Alt key.');" onmouseout="kill()" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Key4.png" ALT="Spacebar key. U+0020 SPACE" onmouseover = "popup('VK_SPACE<br/>Spacebar key.<br/>U+0020 SPACE');" onmouseout="kill()" WIDTH=308 HEIGHT=40></TD>
+<TD><IMG src="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_RMENU<br/>Alt key.');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Control_Centered.png" STYLE=cursor:hand ALT="Ctrl key." onmouseover = "popup('VK_CONTROL<br/>Ctrl key.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD></TR></TABLE>
+</DIV>
+<DIV ID=normalcaps CLASS=normalcaps STYLE="display: none">
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/F0C00-VK_1-0-1.png" ALT="'U+10320 OLD ITALIC NUMERAL ONE'"  onmouseover = "popup('VK_1<br/>U+10320 OLD ITALIC NUMERAL ONE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/F0C00-VK_5-0-1.png" ALT="'U+10321 OLD ITALIC NUMERAL FIVE'"  onmouseover = "popup('VK_5<br/>U+10321 OLD ITALIC NUMERAL FIVE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/F0C00-VK_0-0-1.png" ALT="'U+10322 OLD ITALIC NUMERAL TEN'"  onmouseover = "popup('VK_0<br/>U+10322 OLD ITALIC NUMERAL TEN');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/F0C00-VK_OEM_MINUS-0-1.png" ALT="'U+10323 OLD ITALIC NUMERAL FIFTY'"  onmouseover = "popup('VK_OEM_MINUS<br/>U+10323 OLD ITALIC NUMERAL FIFTY');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG src="images/BackSp.png" ALT="Backspace key. U+0008 BACKSPACE" onmouseover = "popup('VK_BACK<br/>Backspace key.<br/>U+0008 BACKSPACE');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/Tab.png" ALT="Tab key. U+0009 CHARACTER TABULATION" onmouseover = "popup('VK_TAB<br/>Tab key.<br/>U+0009 CHARACTER TABULATION');" onmouseout="kill()" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_Q-0-1.png" ALT="'U+10312 OLD ITALIC LETTER KU'"  onmouseover = "popup('VK_Q<br/>U+10312 OLD ITALIC LETTER KU');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_E-0-1.png" ALT="'U+10304 OLD ITALIC LETTER E'"  onmouseover = "popup('VK_E<br/>U+10304 OLD ITALIC LETTER E');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_R-0-1.png" ALT="'U+10313 OLD ITALIC LETTER ER'"  onmouseover = "popup('VK_R<br/>U+10313 OLD ITALIC LETTER ER');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_T-0-1.png" ALT="'U+10315 OLD ITALIC LETTER TE'"  onmouseover = "popup('VK_T<br/>U+10315 OLD ITALIC LETTER TE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_U-0-1.png" ALT="'U+10316 OLD ITALIC LETTER U'"  onmouseover = "popup('VK_U<br/>U+10316 OLD ITALIC LETTER U');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_I-0-1.png" ALT="'U+10309 OLD ITALIC LETTER I'"  onmouseover = "popup('VK_I<br/>U+10309 OLD ITALIC LETTER I');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_O-0-1.png" ALT="'U+1030F OLD ITALIC LETTER O'"  onmouseover = "popup('VK_O<br/>U+1030F OLD ITALIC LETTER O');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_P-0-1.png" ALT="'U+10310 OLD ITALIC LETTER PE'"  onmouseover = "popup('VK_P<br/>U+10310 OLD ITALIC LETTER PE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/EnterX.png" ALT="Enter key. U+000D CARRIAGE RETURN (CR)" onmouseover = "popup('VK_RETURN<br/>Enter key.<br/>U+000D CARRIAGE RETURN (CR)');" onmouseout="kill()" WIDTH="60" HEIGHT="84" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/CapsLock2.png" STYLE=cursor:hand ALT="Caps Lock key with Caps Lock enabled. Click to change keyboard state."  onClick=Click(1) onmouseover = "popup('VK_CAPITAL<br/>Caps Lock key with Caps Lock enabled.<br/>Click to change keyboard state.');MouseOver(1);" onmouseout="kill();MouseOut(1);" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_A-0-1.png" ALT="'U+10300 OLD ITALIC LETTER A'"  onmouseover = "popup('VK_A<br/>U+10300 OLD ITALIC LETTER A');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_S-0-1.png" ALT="'U+10314 OLD ITALIC LETTER ES'"  onmouseover = "popup('VK_S<br/>U+10314 OLD ITALIC LETTER ES');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_D-0-1.png" ALT="'U+10303 OLD ITALIC LETTER DE'"  onmouseover = "popup('VK_D<br/>U+10303 OLD ITALIC LETTER DE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_F-0-1.png" ALT="'U+10305 OLD ITALIC LETTER VE'"  onmouseover = "popup('VK_F<br/>U+10305 OLD ITALIC LETTER VE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_H-0-1.png" ALT="'U+10307 OLD ITALIC LETTER HE'"  onmouseover = "popup('VK_H<br/>U+10307 OLD ITALIC LETTER HE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_K-0-1.png" ALT="'U+1030A OLD ITALIC LETTER KA'"  onmouseover = "popup('VK_K<br/>U+1030A OLD ITALIC LETTER KA');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_L-0-1.png" ALT="'U+1030B OLD ITALIC LETTER EL'"  onmouseover = "popup('VK_L<br/>U+1030B OLD ITALIC LETTER EL');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/003a.png" ALT="U+003A COLON"  onmouseover = "popup('VK_OEM_1<br/>U+003A COLON');" onmouseout="kill();" WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/None.png" ALT="Blank key." WIDTH="40" HEIGHT="0" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position: relative; left: 0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/NarrowShift.png" STYLE=cursor:hand ALT="Shift key. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/F0C00-VK_Z-0-1.png" ALT="'U+10306 OLD ITALIC LETTER ZE'"  onmouseover = "popup('VK_Z<br/>U+10306 OLD ITALIC LETTER ZE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/F0C00-VK_X-0-1.png" ALT="'U+10317 OLD ITALIC LETTER EKS'"  onmouseover = "popup('VK_X<br/>U+10317 OLD ITALIC LETTER EKS');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/F0C00-VK_C-0-1.png" ALT="'U+10302 OLD ITALIC LETTER KE'"  onmouseover = "popup('VK_C<br/>U+10302 OLD ITALIC LETTER KE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/F0C00-VK_B-0-1.png" ALT="'U+10301 OLD ITALIC LETTER BE'"  onmouseover = "popup('VK_B<br/>U+10301 OLD ITALIC LETTER BE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/F0C00-VK_N-0-1.png" ALT="'U+1030D OLD ITALIC LETTER EN'"  onmouseover = "popup('VK_N<br/>U+1030D OLD ITALIC LETTER EN');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/F0C00-VK_M-0-1.png" ALT="'U+1030C OLD ITALIC LETTER EM'"  onmouseover = "popup('VK_M<br/>U+1030C OLD ITALIC LETTER EM');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/00b7.png" ALT="U+00B7 MIDDLE DOT"  onmouseover = "popup('VK_OEM_PERIOD<br/>U+00B7 MIDDLE DOT');" onmouseout="kill();" WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Shift.png" STYLE=cursor:hand ALT="Shift key. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="104" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position:relative; left:0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/Control.png" STYLE=cursor:hand ALT="Ctrl key." onmouseover = "popup('VK_CONTROL<br/>Ctrl key.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_LMENU<br/>Alt key.');" onmouseout="kill()" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Key4.png" ALT="Spacebar key. U+0020 SPACE" onmouseover = "popup('VK_SPACE<br/>Spacebar key.<br/>U+0020 SPACE');" onmouseout="kill()" WIDTH=308 HEIGHT=40></TD>
+<TD><IMG src="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_RMENU<br/>Alt key.');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Control_Centered.png" STYLE=cursor:hand ALT="Ctrl key." onmouseover = "popup('VK_CONTROL<br/>Ctrl key.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD></TR></TABLE>
+</DIV>
+<DIV ID=shiftlower CLASS=shiftlower STYLE="display: none">
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG src="images/BackSp.png" ALT="Backspace key. U+0008 BACKSPACE" onmouseover = "popup('VK_BACK<br/>Backspace key.<br/>U+0008 BACKSPACE');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/Tab.png" ALT="Tab key. U+0009 CHARACTER TABULATION" onmouseover = "popup('VK_TAB<br/>Tab key.<br/>U+0009 CHARACTER TABULATION');" onmouseout="kill()" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_R-1-0.png" ALT="'U+1031B OLD ITALIC LETTER ERS'"  onmouseover = "popup('VK_R<br/>U+1031B OLD ITALIC LETTER ERS');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_T-1-0.png" ALT="'U+10308 OLD ITALIC LETTER THE'"  onmouseover = "popup('VK_T<br/>U+10308 OLD ITALIC LETTER THE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_U-1-0.png" ALT="'U+1031E OLD ITALIC LETTER UU'"  onmouseover = "popup('VK_U<br/>U+1031E OLD ITALIC LETTER UU');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_I-1-0.png" ALT="'U+1031D OLD ITALIC LETTER II'"  onmouseover = "popup('VK_I<br/>U+1031D OLD ITALIC LETTER II');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_P-1-0.png" ALT="'U+10318 OLD ITALIC LETTER PHE'"  onmouseover = "popup('VK_P<br/>U+10318 OLD ITALIC LETTER PHE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/EnterX.png" ALT="Enter key. U+000D CARRIAGE RETURN (CR)" onmouseover = "popup('VK_RETURN<br/>Enter key.<br/>U+000D CARRIAGE RETURN (CR)');" onmouseout="kill()" WIDTH="60" HEIGHT="84" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/CapsLock.png" STYLE=cursor:hand ALT="Caps Lock key. Click to change keyboard state."  onClick=Click(1) onmouseover = "popup('VK_CAPITAL<br/>Caps Lock key.<br/>Click to change keyboard state.');MouseOver(1);" onmouseout="kill();MouseOut(1);" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_S-1-0.png" ALT="'U+10311 OLD ITALIC LETTER SHE'"  onmouseover = "popup('VK_S<br/>U+10311 OLD ITALIC LETTER SHE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_F-1-0.png" ALT="'U+1031A OLD ITALIC LETTER EF'"  onmouseover = "popup('VK_F<br/>U+1031A OLD ITALIC LETTER EF');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_K-1-0.png" ALT="'U+10319 OLD ITALIC LETTER KHE'"  onmouseover = "popup('VK_K<br/>U+10319 OLD ITALIC LETTER KHE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/205d.png" ALT="U+205D TRICOLON"  onmouseover = "popup('VK_OEM_1<br/>U+205D TRICOLON');" onmouseout="kill();" WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/None.png" ALT="Blank key." WIDTH="40" HEIGHT="0" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position: relative; left: 0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/NarrowShift2.png" STYLE=cursor:hand ALT="Shift key with Shift enabled. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key with Shift enabled.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/F0C00-VK_Z-1-0.png" ALT="'U+1030E OLD ITALIC LETTER ESH'"  onmouseover = "popup('VK_Z<br/>U+1030E OLD ITALIC LETTER ESH');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/F0C00-VK_C-1-0.png" ALT="'U+1031C OLD ITALIC LETTER CHE'"  onmouseover = "popup('VK_C<br/>U+1031C OLD ITALIC LETTER CHE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Shift2.png" STYLE=cursor:hand ALT="Shift key with Shift enabled. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key with Shift enabled.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="104" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position:relative; left:0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/Control.png" STYLE=cursor:hand ALT="Ctrl key." onmouseover = "popup('VK_CONTROL<br/>Ctrl key.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_LMENU<br/>Alt key.');" onmouseout="kill()" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Key4.png" ALT="Spacebar key. U+0020 SPACE" onmouseover = "popup('VK_SPACE<br/>Spacebar key.<br/>U+0020 SPACE');" onmouseout="kill()" WIDTH=308 HEIGHT=40></TD>
+<TD><IMG src="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_RMENU<br/>Alt key.');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Control_Centered.png" STYLE=cursor:hand ALT="Ctrl key." onmouseover = "popup('VK_CONTROL<br/>Ctrl key.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD></TR></TABLE>
+</DIV>
+<DIV ID=shiftcaps CLASS=shiftcaps STYLE="display: none">
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG src="images/BackSp.png" ALT="Backspace key. U+0008 BACKSPACE" onmouseover = "popup('VK_BACK<br/>Backspace key.<br/>U+0008 BACKSPACE');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/Tab.png" ALT="Tab key. U+0009 CHARACTER TABULATION" onmouseover = "popup('VK_TAB<br/>Tab key.<br/>U+0009 CHARACTER TABULATION');" onmouseout="kill()" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_R-1-1.png" ALT="'U+1031B OLD ITALIC LETTER ERS'"  onmouseover = "popup('VK_R<br/>U+1031B OLD ITALIC LETTER ERS');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_T-1-1.png" ALT="'U+10308 OLD ITALIC LETTER THE'"  onmouseover = "popup('VK_T<br/>U+10308 OLD ITALIC LETTER THE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_U-1-1.png" ALT="'U+1031E OLD ITALIC LETTER UU'"  onmouseover = "popup('VK_U<br/>U+1031E OLD ITALIC LETTER UU');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_I-1-1.png" ALT="'U+1031D OLD ITALIC LETTER II'"  onmouseover = "popup('VK_I<br/>U+1031D OLD ITALIC LETTER II');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/F0C00-VK_P-1-1.png" ALT="'U+10318 OLD ITALIC LETTER PHE'"  onmouseover = "popup('VK_P<br/>U+10318 OLD ITALIC LETTER PHE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/EnterX.png" ALT="Enter key. U+000D CARRIAGE RETURN (CR)" onmouseover = "popup('VK_RETURN<br/>Enter key.<br/>U+000D CARRIAGE RETURN (CR)');" onmouseout="kill()" WIDTH="60" HEIGHT="84" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/CapsLock2.png" STYLE=cursor:hand ALT="Caps Lock key with Caps Lock enabled. Click to change keyboard state."  onClick=Click(1) onmouseover = "popup('VK_CAPITAL<br/>Caps Lock key with Caps Lock enabled.<br/>Click to change keyboard state.');MouseOver(1);" onmouseout="kill();MouseOut(1);" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_S-1-1.png" ALT="'U+10311 OLD ITALIC LETTER SHE'"  onmouseover = "popup('VK_S<br/>U+10311 OLD ITALIC LETTER SHE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_F-1-1.png" ALT="'U+1031A OLD ITALIC LETTER EF'"  onmouseover = "popup('VK_F<br/>U+1031A OLD ITALIC LETTER EF');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/F0C00-VK_K-1-1.png" ALT="'U+10319 OLD ITALIC LETTER KHE'"  onmouseover = "popup('VK_K<br/>U+10319 OLD ITALIC LETTER KHE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/205d.png" ALT="U+205D TRICOLON"  onmouseover = "popup('VK_OEM_1<br/>U+205D TRICOLON');" onmouseout="kill();" WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/None.png" ALT="Blank key." WIDTH="40" HEIGHT="0" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position: relative; left: 0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/NarrowShift2.png" STYLE=cursor:hand ALT="Shift key with Shift enabled. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key with Shift enabled.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/F0C00-VK_Z-1-1.png" ALT="'U+1030E OLD ITALIC LETTER ESH'"  onmouseover = "popup('VK_Z<br/>U+1030E OLD ITALIC LETTER ESH');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/F0C00-VK_C-1-1.png" ALT="'U+1031C OLD ITALIC LETTER CHE'"  onmouseover = "popup('VK_C<br/>U+1031C OLD ITALIC LETTER CHE');" onmouseout="kill();" WIDTH="40" HEIGHT="40"></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Shift2.png" STYLE=cursor:hand ALT="Shift key with Shift enabled. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key with Shift enabled.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="104" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position:relative; left:0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/Control.png" STYLE=cursor:hand ALT="Ctrl key." onmouseover = "popup('VK_CONTROL<br/>Ctrl key.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_LMENU<br/>Alt key.');" onmouseout="kill()" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Key4.png" ALT="Spacebar key. U+0020 SPACE" onmouseover = "popup('VK_SPACE<br/>Spacebar key.<br/>U+0020 SPACE');" onmouseout="kill()" WIDTH=308 HEIGHT=40></TD>
+<TD><IMG src="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_RMENU<br/>Alt key.');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Control_Centered.png" STYLE=cursor:hand ALT="Ctrl key." onmouseover = "popup('VK_CONTROL<br/>Ctrl key.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD></TR></TABLE>
+</DIV>
+<DIV ID=ctrllower CLASS=ctrllower STYLE="display: none">
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG src="images/BackSp.png" ALT="Backspace key. U+007F DELETE" onmouseover = "popup('VK_BACK<br/>Backspace key.<br/>U+007F DELETE');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/Tab.png" ALT="Tab key." onmouseover = "popup('VK_TAB<br/>Tab key');" onmouseout="kill()" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/EnterX.png" ALT="Enter key. U+000A LINE FEED (LF)" onmouseover = "popup('VK_RETURN<br/>Enter key.<br/>U+000A LINE FEED (LF)');" onmouseout="kill()" WIDTH="60" HEIGHT="84" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/CapsLock.png" STYLE=cursor:hand ALT="Caps Lock key. Click to change keyboard state."  onClick=Click(1) onmouseover = "popup('VK_CAPITAL<br/>Caps Lock key.<br/>Click to change keyboard state.');MouseOver(1);" onmouseout="kill();MouseOut(1);" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/None.png" ALT="Blank key." WIDTH="40" HEIGHT="0" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position: relative; left: 0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/NarrowShift.png" STYLE=cursor:hand ALT="Shift key. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Shift.png" STYLE=cursor:hand ALT="Shift key. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="104" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position:relative; left:0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/Control2.png" STYLE=cursor:hand ALT="Ctrl key with Ctrl enabled." onmouseover = "popup('VK_CONTROL<br/>Ctrl key with Ctrl enabled.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_LMENU<br/>Alt key.');" onmouseout="kill()" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Key4.png" ALT="Spacebar key." onmouseover = "popup('VK_SPACE<br/>Spacebar key.');" onmouseout="kill()" WIDTH=308 HEIGHT=40></TD>
+<TD><IMG src="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_RMENU<br/>Alt key.');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Control_Centered2.png" STYLE=cursor:hand ALT="Ctrl key with Ctrl enabled." onmouseover = "popup('VK_CONTROL<br/>Ctrl key with Ctrl enabled.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD></TR></TABLE>
+</DIV>
+<DIV ID=ctrlcaps CLASS=ctrlcaps STYLE="display: none">
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG src="images/BackSp.png" ALT="Backspace key. U+007F DELETE" onmouseover = "popup('VK_BACK<br/>Backspace key.<br/>U+007F DELETE');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/Tab.png" ALT="Tab key." onmouseover = "popup('VK_TAB<br/>Tab key');" onmouseout="kill()" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/EnterX.png" ALT="Enter key. U+000A LINE FEED (LF)" onmouseover = "popup('VK_RETURN<br/>Enter key.<br/>U+000A LINE FEED (LF)');" onmouseout="kill()" WIDTH="60" HEIGHT="84" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/CapsLock2.png" STYLE=cursor:hand ALT="Caps Lock key with Caps Lock enabled. Click to change keyboard state."  onClick=Click(1) onmouseover = "popup('VK_CAPITAL<br/>Caps Lock key with Caps Lock enabled.<br/>Click to change keyboard state.');MouseOver(1);" onmouseout="kill();MouseOut(1);" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/None.png" ALT="Blank key." WIDTH="40" HEIGHT="0" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position: relative; left: 0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/NarrowShift.png" STYLE=cursor:hand ALT="Shift key. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Shift.png" STYLE=cursor:hand ALT="Shift key. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="104" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position:relative; left:0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/Control2.png" STYLE=cursor:hand ALT="Ctrl key with Ctrl enabled." onmouseover = "popup('VK_CONTROL<br/>Ctrl key with Ctrl enabled.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_LMENU<br/>Alt key.');" onmouseout="kill()" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Key4.png" ALT="Spacebar key." onmouseover = "popup('VK_SPACE<br/>Spacebar key.');" onmouseout="kill()" WIDTH=308 HEIGHT=40></TD>
+<TD><IMG src="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_RMENU<br/>Alt key.');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Control_Centered2.png" STYLE=cursor:hand ALT="Ctrl key with Ctrl enabled." onmouseover = "popup('VK_CONTROL<br/>Ctrl key with Ctrl enabled.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD></TR></TABLE>
+</DIV>
+<DIV ID=shiftctrllower CLASS=shiftctrllower STYLE="display: none">
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/BackSp.png" ALT="Backspace key." onmouseover = "popup('VK_BACK<br/>Backspace key');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/Tab.png" ALT="Tab key." onmouseover = "popup('VK_TAB<br/>Tab key');" onmouseout="kill()" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/EnterX.png" ALT="Enter key." onmouseover = "popup('VK_RETURN<br/>Enter key.');" onmouseout="kill()" WIDTH="60" HEIGHT="84" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/CapsLock.png" STYLE=cursor:hand ALT="Caps Lock key. Click to change keyboard state."  onClick=Click(1) onmouseover = "popup('VK_CAPITAL<br/>Caps Lock key.<br/>Click to change keyboard state.');MouseOver(1);" onmouseout="kill();MouseOut(1);" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/None.png" ALT="Blank key." WIDTH="40" HEIGHT="0" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position: relative; left: 0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/NarrowShift2.png" STYLE=cursor:hand ALT="Shift key with Shift enabled. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key with Shift enabled.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Shift2.png" STYLE=cursor:hand ALT="Shift key with Shift enabled. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key with Shift enabled.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="104" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position:relative; left:0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/Control2.png" STYLE=cursor:hand ALT="Ctrl key with Ctrl enabled." onmouseover = "popup('VK_CONTROL<br/>Ctrl key with Ctrl enabled.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_LMENU<br/>Alt key.');" onmouseout="kill()" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Key4.png" ALT="Spacebar key." onmouseover = "popup('VK_SPACE<br/>Spacebar key.');" onmouseout="kill()" WIDTH=308 HEIGHT=40></TD>
+<TD><IMG src="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_RMENU<br/>Alt key.');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Control_Centered2.png" STYLE=cursor:hand ALT="Ctrl key with Ctrl enabled." onmouseover = "popup('VK_CONTROL<br/>Ctrl key with Ctrl enabled.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD></TR></TABLE>
+</DIV>
+<DIV ID=shiftctrlcaps CLASS=shiftctrlcaps STYLE="display: none">
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/BackSp.png" ALT="Backspace key." onmouseover = "popup('VK_BACK<br/>Backspace key');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/Tab.png" ALT="Tab key." onmouseover = "popup('VK_TAB<br/>Tab key');" onmouseout="kill()" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/EnterX.png" ALT="Enter key." onmouseover = "popup('VK_RETURN<br/>Enter key.');" onmouseout="kill()" WIDTH="60" HEIGHT="84" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/CapsLock2.png" STYLE=cursor:hand ALT="Caps Lock key with Caps Lock enabled. Click to change keyboard state."  onClick=Click(1) onmouseover = "popup('VK_CAPITAL<br/>Caps Lock key with Caps Lock enabled.<br/>Click to change keyboard state.');MouseOver(1);" onmouseout="kill();MouseOut(1);" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/None.png" ALT="Blank key." WIDTH="40" HEIGHT="0" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position: relative; left: 0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/NarrowShift2.png" STYLE=cursor:hand ALT="Shift key with Shift enabled. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key with Shift enabled.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Shift2.png" STYLE=cursor:hand ALT="Shift key with Shift enabled. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key with Shift enabled.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="104" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position:relative; left:0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/Control2.png" STYLE=cursor:hand ALT="Ctrl key with Ctrl enabled." onmouseover = "popup('VK_CONTROL<br/>Ctrl key with Ctrl enabled.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_LMENU<br/>Alt key.');" onmouseout="kill()" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Key4.png" ALT="Spacebar key." onmouseover = "popup('VK_SPACE<br/>Spacebar key.');" onmouseout="kill()" WIDTH=308 HEIGHT=40></TD>
+<TD><IMG src="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_RMENU<br/>Alt key.');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Control_Centered2.png" STYLE=cursor:hand ALT="Ctrl key with Ctrl enabled." onmouseover = "popup('VK_CONTROL<br/>Ctrl key with Ctrl enabled.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD></TR></TABLE>
+</DIV>
+<DIV ID=ctrlaltlower CLASS=ctrlaltlower STYLE="display: none">
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/BackSp.png" ALT="Backspace key." onmouseover = "popup('VK_BACK<br/>Backspace key');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/Tab.png" ALT="Tab key." onmouseover = "popup('VK_TAB<br/>Tab key');" onmouseout="kill()" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/EnterX.png" ALT="Enter key." onmouseover = "popup('VK_RETURN<br/>Enter key.');" onmouseout="kill()" WIDTH="60" HEIGHT="84" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/CapsLock.png" STYLE=cursor:hand ALT="Caps Lock key. Click to change keyboard state."  onClick=Click(1) onmouseover = "popup('VK_CAPITAL<br/>Caps Lock key.<br/>Click to change keyboard state.');MouseOver(1);" onmouseout="kill();MouseOut(1);" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/None.png" ALT="Blank key." WIDTH="40" HEIGHT="0" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position: relative; left: 0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/NarrowShift.png" STYLE=cursor:hand ALT="Shift key. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Shift.png" STYLE=cursor:hand ALT="Shift key. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="104" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position:relative; left:0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/Control2.png" STYLE=cursor:hand ALT="Ctrl key with Ctrl enabled." onmouseover = "popup('VK_CONTROL<br/>Ctrl key with Ctrl enabled.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_LMENU<br/>Alt key.');" onmouseout="kill()" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Key4.png" ALT="Spacebar key." onmouseover = "popup('VK_SPACE<br/>Spacebar key.');" onmouseout="kill()" WIDTH=308 HEIGHT=40></TD>
+<TD><IMG src="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_RMENU<br/>Alt key.');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Control_Centered.png" STYLE=cursor:hand ALT="Ctrl key." onmouseover = "popup('VK_CONTROL<br/>Ctrl key.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD></TR></TABLE>
+</DIV>
+<DIV ID=ctrlaltcaps CLASS=ctrlaltcaps STYLE="display: none">
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/BackSp.png" ALT="Backspace key." onmouseover = "popup('VK_BACK<br/>Backspace key');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/Tab.png" ALT="Tab key." onmouseover = "popup('VK_TAB<br/>Tab key');" onmouseout="kill()" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/EnterX.png" ALT="Enter key." onmouseover = "popup('VK_RETURN<br/>Enter key.');" onmouseout="kill()" WIDTH="60" HEIGHT="84" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/CapsLock2.png" STYLE=cursor:hand ALT="Caps Lock key with Caps Lock enabled. Click to change keyboard state."  onClick=Click(1) onmouseover = "popup('VK_CAPITAL<br/>Caps Lock key with Caps Lock enabled.<br/>Click to change keyboard state.');MouseOver(1);" onmouseout="kill();MouseOut(1);" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/None.png" ALT="Blank key." WIDTH="40" HEIGHT="0" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position: relative; left: 0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/NarrowShift.png" STYLE=cursor:hand ALT="Shift key. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Shift.png" STYLE=cursor:hand ALT="Shift key. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="104" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position:relative; left:0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/Control2.png" STYLE=cursor:hand ALT="Ctrl key with Ctrl enabled." onmouseover = "popup('VK_CONTROL<br/>Ctrl key with Ctrl enabled.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_LMENU<br/>Alt key.');" onmouseout="kill()" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Key4.png" ALT="Spacebar key." onmouseover = "popup('VK_SPACE<br/>Spacebar key.');" onmouseout="kill()" WIDTH=308 HEIGHT=40></TD>
+<TD><IMG src="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_RMENU<br/>Alt key.');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Control_Centered.png" STYLE=cursor:hand ALT="Ctrl key." onmouseover = "popup('VK_CONTROL<br/>Ctrl key.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD></TR></TABLE>
+</DIV>
+<DIV ID=shiftctrlaltlower CLASS=shiftctrlaltlower STYLE="display: none">
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/BackSp.png" ALT="Backspace key." onmouseover = "popup('VK_BACK<br/>Backspace key');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/Tab.png" ALT="Tab key." onmouseover = "popup('VK_TAB<br/>Tab key');" onmouseout="kill()" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/EnterX.png" ALT="Enter key." onmouseover = "popup('VK_RETURN<br/>Enter key.');" onmouseout="kill()" WIDTH="60" HEIGHT="84" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/CapsLock.png" STYLE=cursor:hand ALT="Caps Lock key. Click to change keyboard state."  onClick=Click(1) onmouseover = "popup('VK_CAPITAL<br/>Caps Lock key.<br/>Click to change keyboard state.');MouseOver(1);" onmouseout="kill();MouseOut(1);" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/None.png" ALT="Blank key." WIDTH="40" HEIGHT="0" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position: relative; left: 0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/NarrowShift2.png" STYLE=cursor:hand ALT="Shift key with Shift enabled. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key with Shift enabled.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Shift2.png" STYLE=cursor:hand ALT="Shift key with Shift enabled. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key with Shift enabled.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="104" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position:relative; left:0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/Control2.png" STYLE=cursor:hand ALT="Ctrl key with Ctrl enabled." onmouseover = "popup('VK_CONTROL<br/>Ctrl key with Ctrl enabled.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_LMENU<br/>Alt key.');" onmouseout="kill()" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Key4.png" ALT="Spacebar key." onmouseover = "popup('VK_SPACE<br/>Spacebar key.');" onmouseout="kill()" WIDTH=308 HEIGHT=40></TD>
+<TD><IMG src="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_RMENU<br/>Alt key.');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Control_Centered.png" STYLE=cursor:hand ALT="Ctrl key." onmouseover = "popup('VK_CONTROL<br/>Ctrl key.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD></TR></TABLE>
+</DIV>
+<DIV ID=shiftctrlaltcaps CLASS=shiftctrlaltcaps STYLE="display: none">
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/BackSp.png" ALT="Backspace key." onmouseover = "popup('VK_BACK<br/>Backspace key');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/Tab.png" ALT="Tab key." onmouseover = "popup('VK_TAB<br/>Tab key');" onmouseout="kill()" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-22" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/EnterX.png" ALT="Enter key." onmouseover = "popup('VK_RETURN<br/>Enter key.');" onmouseout="kill()" WIDTH="60" HEIGHT="84" /></TD>
+</TR></TABLE>
+<TABLE WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8><TR>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/CapsLock2.png" STYLE=cursor:hand ALT="Caps Lock key with Caps Lock enabled. Click to change keyboard state."  onClick=Click(1) onmouseover = "popup('VK_CAPITAL<br/>Caps Lock key with Caps Lock enabled.<br/>Click to change keyboard state.');MouseOver(1);" onmouseout="kill();MouseOut(1);" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG STYLE="position:relative; left:0; top:-44" SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/None.png" ALT="Blank key." WIDTH="40" HEIGHT="0" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position: relative; left: 0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/NarrowShift2.png" STYLE=cursor:hand ALT="Shift key with Shift enabled. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key with Shift enabled.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="60" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/0000.png" ALT="Blank key." WIDTH="40" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Shift2.png" STYLE=cursor:hand ALT="Shift key with Shift enabled. Click to change keyboard state."  onClick=Click(2) onmouseover = "popup('VK_SHIFT<br/>Shift key with Shift enabled.<br/>Click to change keyboard state.');MouseOver(2);" onmouseout="kill();MouseOut(2);" WIDTH="104" HEIGHT="40" /></TD>
+</TR></TABLE>
+<TABLE STYLE="position:relative; left:0; top:-44" WIDTH=640 HEIGHT=40 BORDER=0 CELLSPACING=0 PADDING=0 BGCOLOR=#C8C8C8>
+<TD><IMG SRC="images/Control2.png" STYLE=cursor:hand ALT="Ctrl key with Ctrl enabled." onmouseover = "popup('VK_CONTROL<br/>Ctrl key with Ctrl enabled.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_LMENU<br/>Alt key.');" onmouseout="kill()" WIDTH=80 HEIGHT=40></TD>
+<TD><IMG SRC="images/Key4.png" ALT="Spacebar key." onmouseover = "popup('VK_SPACE<br/>Spacebar key.');" onmouseout="kill()" WIDTH=308 HEIGHT=40></TD>
+<TD><IMG src="images/Alt.png" ALT="Alt key." onmouseover = "popup('VK_RMENU<br/>Alt key.');" onmouseout="kill()" WIDTH="80" HEIGHT="40" /></TD>
+<TD><IMG SRC="images/Control_Centered.png" STYLE=cursor:hand ALT="Ctrl key." onmouseover = "popup('VK_CONTROL<br/>Ctrl key.');MouseOver(4);" onmouseout="kill();MouseOut(4);" WIDTH=80 HEIGHT=40></TD></TR></TABLE>
+</DIV>
+
+</BODY>
+</HTML>

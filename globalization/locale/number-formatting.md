@@ -1,76 +1,49 @@
 ---
-title: Number Formatting
-description: Thousands separator, decimal separator, and the way negative numbers are displayed can vary in different countries/regions.
-ms.assetid: 8f183742-60d3-40bb-ab13-083c1ec7adf4
-ms.date: 01/26/2017
+title: Format numbers
+description: Format numeric values based on region standards using locale-aware methods, including decimal separators, grouping, and symbols.
+ms.date: 06/13/2023
 ---
-# Number Formatting
 
-When dealing with numeric values, there are six major items to pay attention to:
+# Format numbers
 
-1.  **The character used as the thousands separator.**  
-    In the United States, this character is a comma (,). In Germany, it is a period (.). Thus one thousand and twenty-five is displayed as 1,025 in the United States and 1.025 in Germany. In Sweden, the thousands separator is a space.
+Every country/region has its own standards and conventions for representing numbers. Differences include the character used for the decimal separator, how negative numbers are represented, and how currencies are displayed. Fortunately, libraries like ICU, frameworks like .NET, and programming languages like Java help you display and parse numbers in the correct format for users’ locales.
 
-2.  **The character used as the decimal separator.**  
-    In the United States, this character is a period (.). In Germany, it is a comma (,). Thus one thousand twenty-five and seven tenths is displayed as 1,025.7 in the United States and 1.025,7 in Germany.
+This article discusses some of the differences in number formats by country/region.
 
-3.  **The way negative numbers are displayed.**  
-    The negative sign can be used at the beginning of the number, but it can also be used at the end of the number. Alternatively, the number can be displayed with parentheses around it or even in a color such as red. Thus a negative five hundred and twenty-seven could be displayed as:  
+## Decimal separation
 
-    -   -527
+The decimal separator is a character that splits the representation of a number into the integer and the fraction. Two characters frequently used for the decimal separator are the comma (,&nbsp;U+002C) and the dot (.&nbsp;U+002E), also known as the full stop, period, or decimal point. Other characters include the Arabic decimal separator (٫&nbsp;U+066B), the apostrophe ('&nbsp;U+0027), and the middle dot (·&nbsp;U+00B7).
 
-    -   527-
+The decimal separator can depend on context. For example, in Switzerland, the comma is used as the decimal separator for most situations, but the dot is used for currencies.
 
-    -   (527)
+## Number grouping and separation
 
-    -   [527]
+To make it easier to read large numbers, grouping can be used for both the integer and fractional part of the number. European languages often use groups of three digits based on the 10^3 names of higher power numbers, whereas China, Japan, and Korea can use groups of four digits based on the 10^4 names of higher power numbers.
 
-4.  **The shape of the numbers, or whether they have a one-to-one correspondence to the decimal set of digits.**  
-    Numbers might, of course, be shaped differently from one locale to another. Also, numbers in some locales might not correspond directly to there digits (0-9) used in, say, the United States. (See Table 1 below)
+The South Asian grouping system used in countries/regions like India starts grouping at four digits, then every second power of 10. For example, 10^7 is represented as 1,00,000.
 
-| **Script**                        | **Digits Used**                   |
-|-----------------------------------|-----------------------------------|
-| Latin                             | 0 1 2 3 4 5 6 7 8 9               |
-| Arabic                            | ٠‎ ١‎ ٢‎ ٣‎ ٤‎ ٥‎ ٦‎ ٧‎ ٨‎ ٩      |
-| Chinese / Japanese                | 〇 一 二 三 四 五 六 七 八 九 十… |
-| Hebrew                            | א ,ב ,ג, ד, ה, ו, ז, ח ,ט…        |
-| Korean                            | 일 이 삼 사 오 육 칠 팔 구…       |
-| The Korean regularly uses both a Sino-Korean system and a native Korean system. Everything that can be counted will use one of the two systems, but seldom both. | 하나 둘 셋 넷 다섯 여섯 일곱 여덟 아홉…. |
-| Bengla                            | ০ ১ ২ ৩ ৪ ৫ ৬ ৭ ৮ ৯               |
-| Devanagari (script used to write Hindi,Marathi, and other languages)                       | ० १ २ ३ ४ ५ ६ ७ ८ ९ |
-| Gujarati                          | ୦ ୧ ୨ ୩ ୪ ୫ ୬ ୭ ୮ ୯               |
-| Gurmukhi (one of the scripts used to write |                                   |
-| Punjabi)                        | ੦ ੧ ੨ ੩ ੪ ੫ ੬ ੭ ੮ ੯               |
-| Kannada                           | ೦ ೧ ೨ ೩ ೪ ೫ ೬ ೭ ೮ ೯               |
-| Malayalam                         | ൦ ൧ ൨ ൩ ൪ ൫ ൬ ൭ ൮ ൯               |
-| Odia                              | ୦ ୧ ୨ ୩ ୪ ୫ ୬ ୭ ୮ ୯               |
-| Tami                              | ௦ ௧ ௨ ௩ ௪ ௫ ௬ ௭ ௮ ௯               |
-| Telugu                            | ౦ ౧ ౨ ౩ ౪ ౫ ౬ ౭ ౮ ౯               |
-| Thai                              | ๐ ๑ ๒ ๓ ๔ ๕ ๖ ๗ ๘ ๙               |
-| Tibetan                           | ༠ ༡ ༢ ༣ ༤ ༥ ༦ ༧ ༨ ༩               |
+Digit grouping rules can specify when grouping should occur. In Germany, the DIN 1333 standard specifies that a space should be used as a separator starting at five digits, so a four-digit number could be shown as 1234 but a five-digit number should be shown as 12&nbsp;345. The standard might differ from normal use, which for Germany is using the comma as the grouping separator (12,345).
 
-**Table 1**: Digits used for a variety of scripts.
+Like decimal separation, various characters can be used as the grouping separator, including space (U+0020), comma (,&nbsp;U+002C), and dot (.&nbsp;U+002E). The separator used can also depend on context. For example, in the United States, the comma is typically used for the grouping separator; however, several publication standards follow international standards in using either a space or a thin space character.
 
-Note how some scripts have one more digit than Latin or Arabic. This represents the number 10.
+## Negative and positive numbers
 
-5.  **Digit grouping.**  
-    This refers to the number of digits contained between each separator for all digit groups that appear to the left of the decimal separator. For example, the 3-digit group is used for most cultures, such as for English (United States): 123,456,789.00. However, notice that Hindi uses a 2-digit grouping, except for the 3-digit grouping for denoting hundreds: 12,34,56,789.00
+Negative numbers are typically represented with a prefix of a hyphen-minus character (-&nbsp;U+002D). The plus sign character (+&nbsp;U+002B) can be used as a prefix for positive numbers. Other formats are also common, including the use of parentheses ((&nbsp;U+0028 and )&nbsp;U+0029) to represent negative numbers in accounting formats.
 
-6.  **The placement of the percent sign (%).**  
-    It can be written several ways: 98%, 98 %, 98 pct, %98. Thus you should never assume that you can hard-code the percent sign.
+## Other symbols
 
-The user can define preferred number-formatting parameters by making selections from the Numbers tab of the Customize Regional Options property sheet, within the Regional And Language Options property sheet. (See Figure 1 below.)
+In addition to the decimal separator, the grouping separator, and the minus sign, other symbols are frequently used when formatting numbers. These include symbols to represent a percentage, a per mille (parts per thousand) amount, a currency, an approximate value, an exponent, or an approximate value.
 
-![Number Format](/media/hubs/globalization/IC848906.jpg "Number Format") 
+Convention or standards might specify the order of the numeric value and the symbols and spaces between symbols and numeric values. For example, a price might be represented as €&nbsp;-1.234,56 in the Netherlands and as -1&nbsp;234,56&nbsp;€ in France. For more information about currency formatting, see [Format currency values](currency-formats.md).
 
-**Figure 1:** Selecting the preferred number formatting.
+## Using locales and libraries, frameworks, and programming languages to format numbers
 
-In addition to in-line numbers, there may be additional systems used for [numbered lists](https://support.office.com/en-us/article/Create-a-bulleted-or-numbered-list-9ff81241-58a8-4d88-8d8c-acab3006a23e). Examples include Roman numerals for many locales and Iroha for Japan.
+Localization frameworks and libraries can help you display numbers in the correct format for the user’s locale. Both .NET and ICU provide locale-aware number formatting with defaults for various styles, including currencies, exponents (scientific notation).
 
-### See more info in the below links:
+While the default behavior for libraries, frameworks, and programming languages for formatting numbers might be sufficient, the frameworks do allow the developer full control when formatting numbers. Some examples of formatting numbers beyond using just digits and symbols include:
 
- - [Number Formatting in Win32](number-formatting-in-win32.md)
- - [Number Formatting in .NET Framework](number-formatting-in-dotnet-framework.md)
+- numbers in words: “one-thousand, two hundred and thirty-four”
+- ordinal numbers: “1st” or “twenty-third”
+- compact forms of numbers: “123K” instead of 123,000
 
-
-
+Your framework might support these behaviors by default or might provide a rules-based formatter that allows you to extend the behavior that you need.

@@ -1,13 +1,19 @@
+---
+title: User interface considerations for localization
+description: You need to know how to design your UI so that the localized content does not break the look and feel of your program.
+---
 
+# User interface considerations for localization
 
-# UI Considerations for Localization
+You need to know how to design your user interface so that the localized content does not break the look and feel of your program.
+The following will discuss how to minimize the resizing of your UI caused by languages that require more (or less) space for the same content; how to handle user interface controls like list boxes, combo boxes, buttons and so forth; and how to effectively use images and icons.
 
-Now that you have learned how to store and handle text to make localization more straightforward, you need to know how to design your UI so that the localized content does not break the look and feel of your program. The following will discuss how to minimize the resizing of your UI caused by languages that require more (or less) space for the same content; how to handle UI controls like list boxes, combo boxes, buttons and so forth; and how to effectively use images and icons.
+Note that while the examples show Windows applications, most of the underlying concepts are independent of the development framework you are using and apply to  desktop, mobile or web applications. 
 
-[Element Resizing](https://msdn.microsoft.com/library/mt691882)
+- [Element resizing](element-resizing.md)
 
-[Web Resizing Issues](https://msdn.microsoft.com/library/mt691883)
+- [Web resizing issues](web-resizing-issues.md)
 
-[Localizability of UI Controls](https://msdn.microsoft.com/library/mt712317)
+- [Localizability of user interface controls](localizability-of-ui-controls.md)
 
-[Using Images and Icons](https://msdn.microsoft.com/library/mt712571)
+- [Using images and icons](images-and-icons.md)
