@@ -58,7 +58,6 @@ When you get to specifics in your application, keep in mind significant locale d
 
 To delve into the details of these considerations (and much more), see [International design](international-design.md).
 
-<!--NYI
 ## Localization strategy for different types of content
 
 There isn't a universal way to do localization.
@@ -66,9 +65,8 @@ The type of content or software you're creating will drive varying strategies.
 See:
 
 * [Localize software](../localization/localize-software.md)
-* [Localize content](../localization/localize-content.md)
+* [Localize documentation](../localization/localize-content.md)
 * [Localize games](../localization/localize-games.md)
---->
 
 ## Regulations
 
@@ -108,7 +106,7 @@ When you're ready to localize into to more languages and markets, the cost is lo
 
 When starting a project, it's vital to get these fundamentals in place as early as possible:
 
-1. [Externalize resources](../localizability/isolate-localizable-resources.md), separating localizable from non-localizable resources.
+1. [Externalize resources](../internationalization/externalize-resources.md), separating localizable from non-localizable resources.
 
 2. Produce and test localized builds.
 

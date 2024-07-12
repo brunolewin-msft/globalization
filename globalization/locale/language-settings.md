@@ -1,6 +1,6 @@
 ---
 title: Language settings
-description: Applications should follow the user's language setting in the operating system as a default, not the system language.
+description: You should enable users worldwide to interact with your application by supporting various settings related to languages and input.
 author: m-kauppinen
 ms.author: v-mikau
 ms.topic: conceptual #Required; leave this attribute/value as-is.
@@ -20,7 +20,7 @@ The different variables of a language that your users should be able to set incl
 - [Typing settings](typing-settings.md), which includes support for different keyboard layouts, text prediction, and additional settings, such as composing ideograms using dedicated input devices
 - [Handwriting settings](handwriting-settings.md), which includes support for handwriting on a touchscreen device
 - [Speech settings](speech-settings.md), which includes support for voice recognition and text-to-speech (TTS)
-- Dictionaries and spelling <!-- [Dictionaries and spelling](dictionaries-spelling.md) -->
+- [Proofing tools](dictionaries-spelling.md)
 - [Collation, sorting, and string comparison](sorting-and-string-comparison.md)
 
 Language settings are closely related to regional settings. Regional settings include:
